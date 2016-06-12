@@ -1,12 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+    <title>PINK | Главная</title>
+</head>
+<body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+<header class="page-header">
+    <div class="page-header__logo">
+        <img src="http://placehold.it/75x22" alt="PINK">
+    </div>
+    <button class="page-header__menu-btn hidden js-main-nav" type="button">Меню</button>
+    <nav class="main-nav main-nav--no-js main-nav--close">
+        <a>Главная</a>
+        <a href="photo.html">Фотографии</a>
+        <a href="form.html">Конкурс</a>
+        <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+    </nav>
+    <div class="page-header__banner">
+        <div class="page-header__smartphone"></div>
+    </div>
+</header>
 
-  </body>
+<section class="download">
+    <a href="#" class="btn btn--bold btn--color_white download__link">Скачать приложение</a>
+    <div class="download__platforms">
+        <div class="download__platform-item download__platform-item--ios"></div>
+        <div class="download__platform-item download__platform-item--android"></div>
+        <div class="download__platform-item download__platform-item--windows"></div>
+    </div>
+    <div class="download__comment">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+</section>
+
+<section class="advantages">
+    <div class="advantages__slogan"></div>
+    <div class="advantages__inner slice-block">
+        <div class="advantages__item">
+            <div class="advantages__title">Поднимает настроение</div>
+            <p class="advantages__text">
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            </p>
+        </div>
+        <div class="advantages__item">
+            <div class="advantages__title">Меняет мир вокруг</div>
+            <p class="advantages__text">
+                Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+        </div>
+        <div class="advantages__item">
+            <div class="advantages__title">Заводит новых друзей</div>
+            <p class="advantages__text">
+                Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+        </div>
+    </div>
+    <div class="advantages__banner">
+        <img src="#" alt="">
+    </div>
+</section>
+
+<section class="slider">
+    <div class="review">
+        <div class="review__title">Николай Петров</div>
+        <p class="review__text">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+            познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        </p>
+    </div>
+    <div class="slider__dots">
+        <button class="slider__dot-item" type="button"></button>
+        <button class="slider__dot-item" type="button"></button>
+        <button class="slider__dot-item" type="button"></button>
+    </div>
+</section>
+
+<div class="slice-block slider">
+    <div class="tariffs">
+        <div class="tariff__item" style="transform: translateX(-100%)">
+            <div class="tariff__title">
+                База
+                <div class="tariff__title-price">1,99 USD</div>
+            </div>
+            <div class="tariff__data-item tariff__data-item--support_yes">Розовый фильтр</div>
+            <div class="tariff__data-item tariff__data-item--support_no">Смайлики</div>
+            <div class="tariff__data-item tariff__data-item--support_no">Комментарии</div>
+        </div>
+        <div class="tariff__item" style="transform: translateX(-100%)">
+            <div class="tariff__title tariff__title--hit">
+                Стандарт
+                <div class="tariff__title-price">3,99 USD</div>
+            </div>
+            <div class="tariff__data-item tariff__data-item--support_yes">Розовый фильтр</div>
+            <div class="tariff__data-item tariff__data-item--support_yes">Смайлики</div>
+            <div class="tariff__data-item tariff__data-item--support_no">Комментарии</div>
+        </div>
+        <div class="tariff__item" style="transform: translateX(-100%)">
+            <div class="tariff__title">
+                База
+                <div class="tariff__title-price">1,99 USD</div>
+            </div>
+            <div class="tariff__data-item tariff__data-item--support_yes">Розовый фильтр</div>
+            <div class="tariff__data-item tariff__data-item--support_yes">Смайлики</div>
+            <div class="tariff__data-item tariff__data-item--support_yes">Комментарии</div>
+        </div>
+    </div>
+    <div class="slider__dots">
+        <button class="slider__dot-item" type="button"></button>
+        <button class="slider__dot-item slider__dot-item--active" type="button"></button>
+        <button class="slider__dot-item" type="button"></button>
+    </div>
+</div>
+
+<section class="contacts">
+    <div class="contacts__inner">
+        <div class="contacts__slogan">
+            Остались вопросы?
+            Свяжитесь&nbsp;с&nbsp;нами!
+        </div>
+        <div class="contacts__item">
+            <div class="contacts__item-title">Звоните:</div>
+            <div class="contacts__item-value"><a href="tel:+78125556666">+7 (812) 555-66-66</a></div>
+        </div>
+        <div class="contacts__item">
+            <div class="contacts__item-title">Пишите:</div>
+            <div class="contacts__item-value"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></div>
+        </div>
+        <div class="contacts__item">
+            <div class="contacts__item-title">Приезжайте в гости:</div>
+            <div class="contacts__item-value">ул. Большая Конюшенная, 19/8</div>
+        </div>
+    </div>
+    <div class="contacts__map"></div>
+</section>
+
+<script src="js/app.js"></script>
+
+</body>
 </html>
