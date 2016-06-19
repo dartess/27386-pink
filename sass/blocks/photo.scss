@@ -1,0 +1,53 @@
+.photo {
+  padding: 0 $gutter;
+  &--panorama-this-day{
+    padding: 0;
+    position: relative;
+    &::before {
+      content: 'Панорама дня';
+      position: absolute;
+      top: 0;
+      right: $gutter;
+      padding: 5px $gutter;
+      background-color: $pink;
+      color: $white;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+    .photo__description {
+      padding: 0 $gutter * 2;
+    }
+  }
+  &__image {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  &__description {
+    padding: 0 $gutter;
+    line-height: 1.7;
+  }
+  &__comment {
+    margin: 0 0 10px;
+  }
+  &__like {
+    @include reset-button();
+    color: $pink;
+    svg {
+      vertical-align: middle;
+      margin-right: 14px;
+    }
+  }
+  &__like-count {
+
+  }
+  &__name {
+    font-weight: 700;
+  }
+  &__time {
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}

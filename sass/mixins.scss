@@ -1,0 +1,11 @@
+@mixin col() {
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+@mixin reset-button() {
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0;
+  border-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}

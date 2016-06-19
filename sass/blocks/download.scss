@@ -1,0 +1,32 @@
+.download {
+  padding: 28px $gutter 35px;
+  background-color: $blue-dark;
+  color: $white;
+  text-align: center;
+  &__comment {
+    line-height: 1.7;
+  }
+  &__link {
+    margin-bottom: 32px;
+  }
+  &__platforms {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 31px;
+  }
+  &__platform-item {
+    margin: 0 18px;
+    width: 48px;
+    height: 56px;
+    background: center no-repeat;
+    &--android {
+      background-image: url(../../img/logo-android.svg);
+    }
+    &--ios {
+      background-image: url(../../img/logo-apple.svg);
+    }
+    &--windows {
+      background-image: url(../../img/logo-microsoft.svg);
+    }
+  }
+}

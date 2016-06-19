@@ -2,21 +2,26 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>PINK&nbsp;| Фотографии</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PINK | Фотографии</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="page-header">
-    <div class="page-header__logo">
-        <img src="http://placehold.it/75x22" alt="PINK">
+<header class="page-header page-header--no-js page-header--close">
+    <div class="page-header__top-strip">
+        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="PINK">
+        <button class="page-header__menu-btn" type="button">
+            <span class="page-header__menu-btn-line"></span>
+            Меню
+        </button>
     </div>
-    <button class="page-header__menu-btn hidden js-main-nav" type="button">Меню</button>
-    <nav class="main-nav main-nav--no-js main-nav--close">
-        <a href="index.html">Главная</a>
-        <a>Фотографии</a>
-        <a href="form.html">Конкурс</a>
-        <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+    <nav class="page-header__nav">
+        <a class="page-header__nav-item" href="index.html">Главная</a>
+        <a class="page-header__nav-item">Фотографии</a>
+        <a class="page-header__nav-item" href="form.html">Конкурс</a>
+        <a class="page-header__nav-item" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
     </nav>
     <h1 class="page-header__title">Фотографии пользователей</h1>
 </header>
@@ -28,7 +33,7 @@
 
 <div class="photos">
     <div class="photos__item photo photo--panorama-this-day">
-        <img src="" alt="" class="photo__image">
+        <img src="img/panorama-mobile@1x.jpg" alt="" class="photo__image">
         <div class="photo__description">
             <div class="photo__name">Анна
                 <time class="photo__time">(5&nbsp;минут назад)</time>
@@ -37,11 +42,16 @@
                 Прыгать или нет? Напишите в&nbsp;коментарии свой совет и&nbsp;смотрите прямую транслацию
                 в&nbsp;перископе, задавайте свои вопросы!
             </p>
-            <a href="#" class="photo__like">Нравится: <span class="photo__like-count">215</span></a>
+            <button type="button" class="photo__like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
+                    <path fill="currentColor" d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
+                </svg>
+                Нравится: <span class="photo__like-count">215</span>
+            </button>
         </div>
     </div>
     <div class="photos__item photo">
-        <img src="" alt="" class="photo__image">
+        <img src="img/photo-1-mobile@1x.jpg" alt="" class="photo__image">
         <div class="photo__description">
             <div class="photo__name">Левон
                 <time class="photo__time">(5&nbsp;часов назад)</time>
@@ -49,11 +59,16 @@
             <p class="photo__comment">
                 Вчера он&nbsp;на&nbsp;луну летал, сегодня в&nbsp;руки к&nbsp;нам попал.
             </p>
-            <a href="#" class="photo__like">Нравится: <span class="photo__like-count">356</span></a>
+            <button type="button" class="photo__like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
+                    <path fill="currentColor" d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
+                </svg>
+                Нравится: <span class="photo__like-count">356</span>
+            </button>
         </div>
     </div>
     <div class="photos__item photo">
-        <img src="" alt="" class="photo__image">
+        <img src="img/photo-2-mobile@1x.jpg" alt="" class="photo__image">
         <div class="photo__description">
             <div class="photo__name">Антон
                 <time class="photo__time">(12&nbsp;часов назад)</time>
@@ -61,11 +76,16 @@
             <p class="photo__comment">
                 Соседи будут рады!
             </p>
-            <a href="#" class="photo__like">Нравится: <span class="photo__like-count">666</span></a>
+            <button type="button" class="photo__like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
+                    <path fill="currentColor" d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
+                </svg>
+                Нравится: <span class="photo__like-count">666</span>
+            </button>
         </div>
     </div>
     <div class="photos__item photo">
-        <img src="" alt="" class="photo__image">
+        <img src="img/photo-3-mobile@1x.jpg" alt="" class="photo__image">
         <div class="photo__description">
             <div class="photo__name">Борис
                 <time class="photo__time">(20&nbsp;часов назад)</time>
@@ -73,11 +93,16 @@
             <p class="photo__comment">
                 Здесь могла быть ваша цитата о&nbsp;высоком и&nbsp;вечном.
             </p>
-            <a href="#" class="photo__like">Нравится: <span class="photo__like-count">215</span></a>
+            <button type="button" class="photo__like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
+                    <path fill="currentColor" d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
+                </svg>
+                Нравится: <span class="photo__like-count">215</span>
+            </button>
         </div>
     </div>
     <div class="photos__item photo">
-        <img src="" alt="" class="photo__image">
+        <img src="img/photo-4-mobile@1x.jpg" alt="" class="photo__image">
         <div class="photo__description">
             <div class="photo__name">Сергей
                 <time class="photo__time">(25&nbsp;часов назад)</time>
@@ -85,11 +110,16 @@
             <p class="photo__comment">
                 Самая кубанская в&nbsp;мире!
             </p>
-            <a href="#" class="photo__like">Нравится: <span class="photo__like-count">4</span></a>
+            <button type="button" class="photo__like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
+                    <path fill="currentColor" d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
+                </svg>
+                Нравится: <span class="photo__like-count">4</span>
+            </button>
         </div>
     </div>
     <div class="photos__item photo">
-        <img src="" alt="" class="photo__image">
+        <img src="img/photo-5-mobile@1x.jpg" alt="" class="photo__image">
         <div class="photo__description">
             <div class="photo__name">Максим
                 <time class="photo__time">(40&nbsp;часов назад)</time>
@@ -97,11 +127,16 @@
             <p class="photo__comment">
                 Где снег-то?
             </p>
-            <a href="#" class="photo__like">Нравится: <span class="photo__like-count">150</span></a>
+            <button type="button" class="photo__like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
+                    <path fill="currentColor" d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
+                </svg>
+                Нравится: <span class="photo__like-count">150</span>
+            </button>
         </div>
     </div>
     <div class="photos__item photo">
-        <img src="" alt="" class="photo__image">
+        <img src="img/photo-6-mobile@1x.jpg" alt="" class="photo__image">
         <div class="photo__description">
             <div class="photo__name">Надежда
                 <time class="photo__time">(45&nbsp;часов назад)</time>
@@ -109,7 +144,12 @@
             <p class="photo__comment">
                 Всем GM&nbsp;и&nbsp;взаимные лайки!
             </p>
-            <a href="#" class="photo__like">Нравится: <span class="photo__like-count">2560</span></a>
+            <button type="button" class="photo__like">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
+                    <path fill="currentColor" d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
+                </svg>
+                Нравится: <span class="photo__like-count">2560</span>
+            </button>
         </div>
     </div>
 </div>
@@ -120,20 +160,20 @@
 </div>
 
 <div class="photo-editor">
-    <img src="#" alt="" class="photo-editor__content">
+    <img src="img/photo-7-mobile@1x.jpg" alt="" class="photo-editor__content">
     <div class="photo-editor__controls">
         <button type="button" class="photo-editor__control-item photo-editor__control-item--active">
-
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="currentColor" d="M34 30h4V14c0-2.21-1.79-4-4-4H18v4h16v16zm-20 4V2h-4v8H2v4h8v20c0 2.21 1.79 4 4 4h20v8h4v-8h8v-4H14z"/></svg>
         </button>
         <button type="button" class="photo-editor__control-item">
-
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="currentColor"  d="M33.12 17.88L15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88c-1.17 1.17-1.17 3.07 0 4.24l11 11c.58.59 1.35.88 2.12.88s1.54-.29 2.12-.88l11-11c1.17-1.17 1.17-3.07 0-4.24zM10.41 20L20 10.42 29.59 20H10.41zM38 23s-4 4.33-4 7c0 2.21 1.79 4 4 4s4-1.79 4-4c0-2.67-4-7-4-7zM0 40h48v3H0z"/></svg>
         </button>
         <button type="button" class="photo-editor__control-item">
-
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.92" height="31.92" viewBox="-35.422 -7.96 31.92 31.92"><path fill="currentColor" d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"/><path fill="currentColor"  d="M-19.462 16.33c4.706 0 8.52-3.812 8.52-8.52 0-4.704-3.813-8.518-8.52-8.518"/></svg>
         </button>
     </div>
     <div class="photo-editor__control-bar">
-        <div class="photo-editor__control-spinner"></div>
+        <div class="photo-editor__control-spinner" style="left: 85%"></div>
     </div>
     <div class="photo-editor__buttons">
         <button class="btn photo-editor__button" type="button">Запостить</button>
@@ -143,15 +183,28 @@
 
 <footer class="page-footer">
     <div class="page-footer__logo">
-        <a href="index.html"><img src="http://placehold.it/147x40" alt="PINK"></a>
+        <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="PINK"></a>
     </div>
     <div class="social-buttons page-footer__social">
-        <a href="#" class="social-buttons__item">Twitter</a>
-        <a href="#" class="social-buttons__item">Facebook</a>
-        <a href="#" class="social-buttons__item">Youtube</a>
+        <a href="#" class="social-buttons__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.663" viewBox="0 0 17.5 14.663"><path fill="currentColor" d="M11.283.153c1.736-.485 3.074.263 3.685 1.15.694-.225 1.372-.47 2.072-.69-.004.84-.538 1.478-.883 1.727.704.166 1.343-.48 1.343-.48-.175.976-1.035 1.746-1.61 1.977-.24 6.592-3.273 10.956-10.383 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.34.192 4.01-.412 4.835-1.15-.99-.293-2.76-.464-3.07-2.88.362.104.583.222 1.228.116C1.757 8.067.385 7.366.46 5.218c.295.32 1.1.523 1.382.46C1.117 5.445-.188 2.4.922.844c1.872 1.81 3.847 3.52 7.368 3.685.216-2.24 1.17-3.74 2.993-4.375z"/></svg>
+            Twitter
+        </a>
+        <a href="#" class="social-buttons__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8.673" height="18.944" viewBox="0 0 8.673 18.944"><path fill="currentColor" d="M6.275 3.357h2.398V0H5.795C2.655.18 1.54 2.387 1.948 6.115H0v3.517h1.958v9.312h3.837V9.632h2.857V6.115H5.786c-.02-1.045-.036-2.406.49-2.758z"/></svg>
+            Facebook
+        </a>
+        <a href="#" class="social-buttons__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14.64" height="13.96" viewBox="0 0 14.64 13.96"><path fill="currentColor" d="M1.775 13.78C.8 14.257 0 13.758 0 12.67V1.29C0 .202.8-.295 1.775.18l12.133 5.933c.975.478.975 1.258 0 1.736L1.775 13.78z"/></svg>
+            Youtube
+        </a>
     </div>
     <div class="page-footer__copyright">
-        Разработано <a href="https://htmlacademy.ru">html academy</a>
+        Разработано
+        <a href="https://htmlacademy.ru">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path fill="currentColor" d="M13.62.017L13.472 0 0 1.412v24.66l13.472 8.018 13.43-7.99.042-.026V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.547-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.012 1.414 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.032-1.787-.012 1.413 1.852 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.016 1.045-7.94-4.728-.015 1.416 7.98 4.796.016 1.076-7.97-4.74-.014 1.414 8.02 4.82.046.027 8.143-4.872v-1.267l-.01-.148v-3.76l3.414-2.037v10.02L13.47 31.85 1.925 24.98v-9.853z"/></svg>
+            html academy
+        </a>
     </div>
 </footer>
 

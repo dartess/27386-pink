@@ -1,0 +1,53 @@
+.tariffs {
+  margin-top: 30px;
+  padding: 0 $gutter;
+  text-transform: uppercase;
+  &__item{
+    &:last-child {
+      .tariffs__data-item{
+        box-shadow: inset 2px 0 0 0 $gray-light, inset -2px 0 0 0 $gray-light, inset 0 -2px 0 0 $gray-light;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    padding: 10px 0;
+    background-color: $blue;
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: inset 2px 0 0 0 $gray-light;
+    &--hit {
+      position: relative;
+      overflow: hidden;
+      &:before {
+        content: 'ХИТ';
+        position: absolute;
+        top: 5px;
+        left: -15px;
+        width: 90px;
+        height: 28px;
+        color: $white;
+        text-align: center;
+        font-size: 14px;
+        background-color: $pink;
+        transform-origin: center bottom;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__title-price {
+    font-weight: 300;
+  }
+  &__data-item {
+    padding: 15px 25px;
+    box-shadow: inset 2px 0 0 0 $gray-light, inset 0 -2px 0 0 $gray-light;
+    background: calc(100% - 19px) center no-repeat;
+    &--support_yes{
+      background-image: url(../../img/icon-yes.svg);
+    }
+    &--support_no{
+      background-image: url(../../img/icon-no.svg);
+    }
+  }
+}
