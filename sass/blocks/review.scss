@@ -1,0 +1,13 @@
+.review {
+  padding: 0 $gutter;
+  text-align: center;
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__text {
+
+  }
+}

@@ -2,28 +2,31 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PINK&nbsp;| Главная</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="page-header">
-    <div class="page-header__logo">
-        <img src="http://placehold.it/75x22" alt="PINK">
+<header class="page-header page-header--no-js page-header--close">
+    <div class="page-header__top-strip">
+        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="PINK">
+        <button class="page-header__menu-btn" type="button">
+            <span class="page-header__menu-btn-line"></span>
+            Меню
+        </button>
     </div>
-    <button class="page-header__menu-btn hidden js-main-nav" type="button">Меню</button>
-    <nav class="main-nav main-nav--no-js main-nav--close">
-        <a>Главная</a>
-        <a href="photo.html">Фотографии</a>
-        <a href="form.html">Конкурс</a>
-        <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+    <nav class="page-header__nav">
+        <a class="page-header__nav-item">Главная</a>
+        <a class="page-header__nav-item" href="photo.html">Фотографии</a>
+        <a class="page-header__nav-item" href="form.html">Конкурс</a>
+        <a class="page-header__nav-item" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
     </nav>
-    <div class="page-header__banner">
-        <div class="page-header__smartphone"></div>
-    </div>
 </header>
 
 <section class="download">
-    <a href="#" class="btn btn--bold btn--color_white download__link">Скачать приложение</a>
+    <a href="#" class="btn btn--color_white download__link">Скачать приложение</a>
     <div class="download__platforms">
         <div class="download__platform-item download__platform-item--ios"></div>
         <div class="download__platform-item download__platform-item--android"></div>
@@ -33,7 +36,12 @@
 </section>
 
 <section class="advantages">
-    <div class="advantages__slogan"></div>
+    <div class="advantages__slogan">
+        Устали от серости мегаполиса?
+    </div>
+    <div class="advantages__slogan">
+        Нам есть, что вам предложить!
+    </div>
     <div class="advantages__inner slice-block">
         <div class="advantages__item">
             <div class="advantages__title">Поднимает настроение</div>
@@ -54,61 +62,90 @@
             </p>
         </div>
     </div>
-    <div class="advantages__banner">
-        <img src="#" alt="">
-    </div>
 </section>
 
-<section class="slider">
-    <div class="review">
-        <div class="review__title">Николай Петров</div>
-        <p class="review__text">
-            &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи!
-            А&nbsp;еще я познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной
-            фотографии!&raquo;
-        </p>
-    </div>
-    <div class="slider__dots">
-        <button class="slider__dot-item" type="button"></button>
-        <button class="slider__dot-item" type="button"></button>
-        <button class="slider__dot-item" type="button"></button>
-    </div>
-</section>
-
-<div class="slice-block slider">
-    <div class="tariffs">
-        <div class="tariff__item" style="transform: translateX(-100%)">
-            <div class="tariff__title">
-                База
-                <div class="tariff__title-price">1,99&nbsp;USD</div>
-            </div>
-            <div class="tariff__data-item tariff__data-item--support_yes">Розовый фильтр</div>
-            <div class="tariff__data-item tariff__data-item--support_no">Смайлики</div>
-            <div class="tariff__data-item tariff__data-item--support_no">Комментарии</div>
+<section class="slider slider--no-js">
+    <div class="slider__wrapper">
+        <div class="review slider__item">
+            <div class="review__title">Николай Петров</div>
+            <p class="review__text">
+                &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые
+                вещи! А&nbsp;еще я познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной
+                фотографии!&raquo;
+            </p>
         </div>
-        <div class="tariff__item" style="transform: translateX(-100%)">
-            <div class="tariff__title tariff__title--hit">
-                Стандарт
-                <div class="tariff__title-price">3,99&nbsp;USD</div>
-            </div>
-            <div class="tariff__data-item tariff__data-item--support_yes">Розовый фильтр</div>
-            <div class="tariff__data-item tariff__data-item--support_yes">Смайлики</div>
-            <div class="tariff__data-item tariff__data-item--support_no">Комментарии</div>
+        <div class="review slider__item">
+            <div class="review__title">Николай Петров</div>
+            <p class="review__text">
+                &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые
+                вещи! А&nbsp;еще я познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной
+                фотографии!&raquo;
+            </p>
         </div>
-        <div class="tariff__item" style="transform: translateX(-100%)">
-            <div class="tariff__title">
-                База
-                <div class="tariff__title-price">1,99&nbsp;USD</div>
-            </div>
-            <div class="tariff__data-item tariff__data-item--support_yes">Розовый фильтр</div>
-            <div class="tariff__data-item tariff__data-item--support_yes">Смайлики</div>
-            <div class="tariff__data-item tariff__data-item--support_yes">Комментарии</div>
+        <div class="review slider__item">
+            <div class="review__title">Николай Петров</div>
+            <p class="review__text">
+                &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые
+                вещи! А&nbsp;еще я познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной
+                фотографии!&raquo;
+            </p>
         </div>
     </div>
     <div class="slider__dots">
-        <button class="slider__dot-item" type="button"></button>
-        <button class="slider__dot-item slider__dot-item--active" type="button"></button>
-        <button class="slider__dot-item" type="button"></button>
+        <button class="slider__dot-item" type="button">
+            <span class="slider__dot-item-inner"></span>
+        </button>
+        <button class="slider__dot-item" type="button">
+            <span class="slider__dot-item-inner"></span>
+        </button>
+        <button class="slider__dot-item" type="button">
+            <span class="slider__dot-item-inner"></span>
+        </button>
+    </div>
+</section>
+
+<div class="slice-block">
+    <div class="slider slider--centered slider--no-js" data-slider-start="2">
+        <div class="tariffs slider__wrapper">
+            <div class="tariffs__item slider__item">
+                <div class="tariffs__title">
+                    База
+                    <div class="tariffs__title-price">1,99&nbsp;USD</div>
+                </div>
+                <div class="tariffs__data-item tariffs__data-item--support_yes">Розовый фильтр</div>
+                <div class="tariffs__data-item tariffs__data-item--support_no">Смайлики</div>
+                <div class="tariffs__data-item tariffs__data-item--support_no">Комментарии</div>
+            </div>
+            <div class="tariffs__item slider__item">
+                <div class="tariffs__title tariffs__title--hit">
+                    Стандарт
+                    <div class="tariffs__title-price">3,99&nbsp;USD</div>
+                </div>
+                <div class="tariffs__data-item tariffs__data-item--support_yes">Розовый фильтр</div>
+                <div class="tariffs__data-item tariffs__data-item--support_yes">Смайлики</div>
+                <div class="tariffs__data-item tariffs__data-item--support_no">Комментарии</div>
+            </div>
+            <div class="tariffs__item slider__item">
+                <div class="tariffs__title">
+                    База
+                    <div class="tariffs__title-price">1,99&nbsp;USD</div>
+                </div>
+                <div class="tariffs__data-item tariffs__data-item--support_yes">Розовый фильтр</div>
+                <div class="tariffs__data-item tariffs__data-item--support_yes">Смайлики</div>
+                <div class="tariffs__data-item tariffs__data-item--support_yes">Комментарии</div>
+            </div>
+        </div>
+        <div class="slider__dots">
+            <button class="slider__dot-item" type="button">
+                <span class="slider__dot-item-inner"></span>
+            </button>
+            <button class="slider__dot-item slider__dot-item--active" type="button">
+                <span class="slider__dot-item-inner"></span>
+            </button>
+            <button class="slider__dot-item" type="button">
+                <span class="slider__dot-item-inner"></span>
+            </button>
+        </div>
     </div>
 </div>
 

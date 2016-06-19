@@ -1,0 +1,33 @@
+.contacts {
+  text-align: center;
+  line-height: 1.2;
+  &__slogan {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 2em 0;
+  }
+  &__inner {
+    position: relative;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    padding-bottom: 30px;
+    background-color: $white;
+  }
+  &__item {
+    margin: 20px 0;
+  }
+  &__item-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__item-value {
+    color: $pink;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  &__map {
+    height: 200px;
+    background: url(../../img/bg-map-mobile@1x.png) center no-repeat;
+  }
+}

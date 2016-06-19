@@ -1,0 +1,21 @@
+.page-footer {
+  text-align: center;
+  padding-top: 40px;
+  &__logo {
+    font-size: 0;
+    margin-bottom: 40px;
+  }
+  &__copyright {
+    a {
+      font-size: 0;
+      margin-left: 5px;
+      color: $pink;
+    }
+    svg {
+      vertical-align: middle;
+    }
+  }
+  &__social {
+    margin-bottom: 39px;
+  }
+}

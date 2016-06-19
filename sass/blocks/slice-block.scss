@@ -1,0 +1,14 @@
+.slice-block {
+  position: relative;
+  background-color: $gray-verylight;
+  margin-top: 100px;
+  &::before {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 100px;
+    background: linear-gradient(-7deg, $gray-verylight, $gray-verylight 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0));
+  }
+}
