@@ -1,32 +1,84 @@
+@import "../variables";
+
 .download {
-  padding: 28px $gutter 35px;
   background-color: $blue-dark;
   color: $white;
   text-align: center;
-  &__comment {
-    line-height: 1.7;
+  font-size: 14px;
+  font-weight: normal;
+
+  @media ($sm) {
+    background-color: rgba(0, 0, 0, 0);
   }
+
+  &__slogan {
+    display: none;
+
+    @media ($sm) {
+      display: block;
+      margin: 82px 0 32px;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    @media ($md) {
+      margin-bottom: 50px;
+      font-size: 50px;
+    }
+  }
+
   &__link {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
+
+    @media ($sm) {
+      margin-bottom: 46px;
+    }
+
+    @media ($md) {
+      margin-bottom: 70px;
+    }
   }
+
   &__platforms {
     display: flex;
     justify-content: center;
-    margin-bottom: 31px;
+    margin-bottom: 23px;
+
+    @media ($sm) {
+      margin-bottom: 38px;
+    }
+
+    @media ($md) {
+      margin-bottom: 54px;
+    }
   }
+
   &__platform-item {
-    margin: 0 18px;
+    margin: 0 16px;
     width: 48px;
     height: 56px;
     background: center no-repeat;
+
     &--android {
       background-image: url(../../img/logo-android.svg);
     }
+
     &--ios {
       background-image: url(../../img/logo-apple.svg);
     }
+
     &--windows {
       background-image: url(../../img/logo-microsoft.svg);
+    }
+  }
+
+  &__comment {
+    line-height: 1.7;
+
+    @media ($sm) {
+      font-size: 18px;
+      line-height: 1.33;
     }
   }
 }

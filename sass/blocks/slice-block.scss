@@ -1,14 +1,42 @@
+@import "../variables";
+
 .slice-block {
   position: relative;
   background-color: $gray-verylight;
-  margin-top: 100px;
+  padding-top: 30px;
+
+  @media ($sm) {
+    padding-top: 50px;
+  }
+
+  @media ($md) {
+    padding-top: 90px;
+  }
+
+  &--top-margin {
+    margin-top: 56px;
+
+    @media ($sm) {
+      margin-top: 50px;
+    }
+  }
+
   &::before {
     content:'';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 100%;
-    height: 100px;
-    background: linear-gradient(-7deg, $gray-verylight, $gray-verylight 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0));
+    top: 0;
+    height: 30px;
+    background: url('../../img/slice.svg') center no-repeat;
+    background-size: 100% 100%;
+
+    @media ($sm) {
+      height: 50px;
+    }
+
+    @media ($md) {
+      height: 90px;
+    }
   }
 }

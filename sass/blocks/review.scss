@@ -1,13 +1,82 @@
+@import "../variables";
+
 .review {
+  position: relative;
   padding: 0 $gutter;
   text-align: center;
+
+  @media ($sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media ($md) {
+    padding-top: 73px;
+
+    &::before {
+      display: block;
+      width: 79px;
+      height: 63px;
+      background-color: #efefef;
+      content: '';
+      order: -10;
+    }
+  }
+
   &__title {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 39px;
+    margin-bottom: 8px;
     font-size: 18px;
     font-weight: 700;
-  }
-  &__text {
 
+    @media ($sm) {
+      margin-top: 28px;
+      margin-bottom: -4px;
+      order: 1;
+      font-size: 20px;
+    }
+
+    @media ($md) {
+      max-width: 680px;
+      margin: 25px auto -12px;
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    display: none;
+
+    @media ($sm) {
+      display: block;
+      order: 3;
+    }
+
+    @media ($md) {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 2.145;
+
+    @media ($sm) {
+      margin-top: 38px;
+      font-size: 18px;
+      line-height: 1.67;
+    }
+
+    @media ($md) {
+      max-width: 680px;
+      margin-top: 49px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

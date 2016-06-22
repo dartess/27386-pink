@@ -1,3 +1,5 @@
+@import "variables";
+
 @font-face {
   font-family: 'OpenSans';
   font-style: normal;
@@ -8,7 +10,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans2';
+  font-family: 'OpenSans';
   font-style: normal;
   font-weight: 300;
   src: local('Open Sans Light'), local('OpenSans-Light'),
@@ -30,6 +32,7 @@
 }
 
 body {
+  min-width: $container-min;
   font-family: $OpenSans;
   font-weight: normal;
   font-size: 14px;
@@ -62,4 +65,10 @@ input, textarea, select {
 
 label, button {
   cursor: pointer;
+}
+
+a{
+  color: $pink;
+  border-bottom: 1px solid $pink;
+  text-decoration: none;
 }

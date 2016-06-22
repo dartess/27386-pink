@@ -1,5 +1,17 @@
+@import "../variables";
+
 .page-slogan {
+  @include container();
   padding: 54px $gutter;
   font-size: 14px;
   text-align: center;
+
+  @media ($sm) {
+    font-size: 18px;
+    max-width: 530px;
+  }
+
+  @media ($md) {
+
+  }
 }

@@ -1,3 +1,5 @@
+@import "../variables";
+
 .btn {
   @include reset-button();
   display: block;
@@ -10,13 +12,21 @@
   text-align: center;
   text-decoration: none;
   color: $pink;
+
+  @media ($md) {
+    font-size: 21px;
+    padding: 2px;
+  }
+
   &--bold {
 
   }
+
   &--color_white{
     border-color: $white;
     color: $white;
   }
+
   &--color_gray {
     color: #DDDFE0;
     border-color: #DDDFE0;
