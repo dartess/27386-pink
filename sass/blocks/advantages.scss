@@ -1,34 +1,164 @@
+@import "../variables";
+
 .advantages {
+  padding: 12px 0 0;
   text-align: center;
+
+  @media ($sm) {
+    padding-top: 48px;
+  }
+
+  @media ($md) {
+    padding-top: 67px;
+  }
+
   &__slogan {
     padding-left: $gutter;
     padding-right: $gutter;
     font-size: 24px;
     font-weight: 300;
     line-height: 1.2;
-    margin: 46px 0;
-  }
-  &__banner {
+    margin: 30px 0;
 
+    @media ($sm) {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    @media ($md) {
+      font-size: 50px;
+    }
+
+    br {
+      display: none;
+
+      @media ($md) {
+        display: inline;
+      }
+    }
   }
+
   &__inner {
+    margin-top: 0;
     padding-left: $gutter;
     padding-right: $gutter;
+
+    @media ($sm) {
+      margin-top: 24px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__container{
+    @include container();
+    display: flex;
+    flex-direction: column;
+    padding-top: 11px;
+
+    @media ($sm) {
+      flex-direction: row-reverse;
+    }
+
+    @media ($sm) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__phones {
+    height: 320px;
     background-image: url(../../img/iphone-screen-mobile@1x.png);
     background-repeat: no-repeat;
     background-position: center calc(100% + 42px);
-    padding-bottom: 320px;
+
+    @media ($sm) {
+      height: 481px;
+      width: 50%;
+    }
+
+    @media ($md) {
+      height: 298px;
+      width: 100%;
+    }
   }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    padding-top: 11px;
+
+    @media ($sm) {
+      width: 50%;
+    }
+
+    @media ($md) {
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+
   &__item {
     line-height: 1.7;
-    margin-bottom: 10px;
-  }
-  &__text {
+    margin-bottom: 20px;
+    text-align: left;
 
+    @media ($sm) {
+      margin-bottom: 23px;
+    }
+
+    @media ($md) {
+      margin-bottom: 23px;
+      width: 300px;
+      padding-left: 33px;
+      padding-right: 33px;
+      text-align: center;
+    }
   }
+
+  &__text {
+    margin: 10px 0;
+  }
+
   &__title {
     font-size: 18px;
     font-weight: 700;
     color: $black;
+  }
+
+  &__effect {
+    display: none;
+
+    @media ($sm) {
+      @include container();
+      @include clearfix();
+      display: block;
+      background: url(../../img/) left center no-repeat;
+    }
+  }
+
+  &__effect-content{
+    margin-top: 96px;
+    margin-bottom: 87px;
+    width: 50%;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  &__effect-title{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @media ($md) {
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__effect-text{
+    margin: 0 0 10px;
+    line-height: 1.71;
   }
 }

@@ -1,6 +1,18 @@
+@import "../variables";
+
 .photos {
 
+  @media ($sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__item {
-    margin-bottom: 48px;
+    flex-basis: 50%;
+    margin-bottom: 20px;
+
+    &--panorama-this-day {
+      flex-basis: 100%;
+    }
   }
 }

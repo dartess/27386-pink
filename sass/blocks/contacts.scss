@@ -1,33 +1,93 @@
+@import "../variables";
+
 .contacts {
   text-align: center;
   line-height: 1.2;
+
+  &__container {
+    @include container();
+  }
+
   &__slogan {
     font-size: 24px;
     font-weight: 300;
-    margin: 2em 0;
+    margin: 42px 0 27px;
+
+    @media ($sm) {
+      margin: 46px 0 34px;
+      font-size: 40px;
+    }
   }
+
   &__inner {
     position: relative;
     padding-left: $gutter;
     padding-right: $gutter;
     padding-bottom: 30px;
     background-color: $white;
+
+    @media ($sm) {
+      padding-bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      right: 0;
+      height: 30px;
+      background: url('../../img/bg-triangle-white-footer.svg') center no-repeat;
+      background-size: 100% 100%;
+
+      @media ($sm) {
+        height: 72px;
+      }
+    }
   }
+
+  &__data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media ($sm) {
+      margin-bottom: -13px;
+    }
+  }
+
   &__item {
-    margin: 20px 0;
+    margin: 11px 0;
+    flex-basis: 50%;
+    padding: 0 $gutter;
+
+    @media ($sm) {
+      margin-bottom: 37px;
+    }
   }
+
   &__item-title {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
+
+    @media ($sm) {
+      margin-bottom: 8px;
+    }
   }
+
   &__item-value {
     color: $pink;
     font-size: 24px;
     font-weight: 300;
   }
+
   &__map {
     height: 200px;
-    background: url(../../img/bg-map-mobile@1x.png) center no-repeat;
+    background: url(../../img/icon-map-marker.svg) center 60% no-repeat, url(../../img/bg-map-mobile@1x.png) center/cover no-repeat;
+
+    @media ($sm) {
+      height: 390px;
+    }
   }
 }

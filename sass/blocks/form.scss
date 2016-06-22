@@ -1,23 +1,72 @@
+@import "../variables";
+
 .form {
+
+  @media ($sm) {
+    @include container();
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
   &__block {
     padding: 38px $gutter 10px;
+
     &:nth-of-type(2n){
       background-color: #F2F2F2;
     }
+
+    @media ($sm) {
+      margin-bottom: 65px;
+
+      &:nth-of-type(n){
+        background-color: #fff;
+      }
+
+      &--name {
+        order: 1;
+      }
+
+      &--achievements {
+        order: 4;
+      }
+
+      &--contacts {
+        order: 3;
+      }
+
+      &--apps {
+        order: 2;
+      }
+
+      &--emotions {
+        order: 5;
+      }
+
+      &--border{
+        border: 2px solid #e5e5e5;
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
   }
+
   input[type=checkbox]{
     display: none;
   }
+
   input[type=checkbox]:checked + &__checkbox{
     &::before {
       background-image: url(../../img/tick.png);
     }    
   }
+
   &__checkbox {
     display: block;
     margin-bottom: 40px;
     position: relative;
     padding-left: 70px;
+
     &::before {
       content: '';
       position: absolute;
@@ -33,16 +82,68 @@
       border-radius: 2px;
     }
   }
+
   &__label {
     display: block;
     padding-left: $gutter;
     margin-bottom: 5px;
     color: $pink;
+
+    @media ($sm) {
+      padding-left: 0;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
   }
+
+  &__input-icon{
+    display: none;
+
+    @media ($sm) {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-color: #e5e5e5;
+    }
+  }
+
   &__input {
     text-transform: uppercase;
     display: block;
     margin-bottom: 20px;
+
+    @media ($sm) {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 50px;
+    }
+
+    &--vertical {
+
+      @media ($sm) {
+        align-items: stretch;
+        margin-bottom: 35px;
+        flex-wrap: wrap;
+
+        .form__label {
+          order: 1;
+          margin-top: 10px;
+          padding-left: $gutter;
+          flex-basis: 100%;
+        }
+
+        input {
+          border-radius: 2px 0 0 2px;
+          order: -1;
+          flex-grow: 1;
+
+          &:nth-child(n){
+            width: auto;
+          }
+        }
+      }
+    }
+
     input {
       display: block;
       width: 100%;
@@ -51,35 +152,47 @@
       color: $black;
       font-size: 18px;
       padding: 5px 22px;
+
       &::placeholder{
         color: $black;
         opacity: 1;
       }
     }
   }
+
   &__note {
     text-align: center;
     text-transform: uppercase;
     margin-top: 35px;
     margin-bottom: 24px;
+
+    @media ($sm) {
+      margin: 0;
+    }
   }
+
   &__note-accent {
     color: $pink;
   }
+
   input[type=radio]{
     display: none;
   }
+
   input[type=radio]:checked + &__radio{
+
     &::after {
       transform: scale(1);
       opacity: 1;
     }
   }
+
   &__radio {
     display: block;
     margin-bottom: 40px;
     position: relative;
     padding-left: 70px;
+
     &::before {
       content: '';
       position: absolute;
@@ -94,6 +207,7 @@
       border: 2px solid #e5e5e5;
       border-radius: 50%;
     }
+
     &::after {
       content:'';
       position: absolute;
@@ -109,16 +223,35 @@
       transition: opacity .1s ease-out, transform .2s ease-out;
     }
   }
+
   &__subtitle {
     margin-bottom: 40px;
     color: $pink;
     line-height: 1.28;
     text-align: center;
     text-transform: uppercase;
-    &--small-margin {
-      margin-bottom: 18px;
+
+    @media ($sm) {
+      margin-top: -48px;
+    }
+
+    &--from-tablet{
+      display: none;
+
+      @media ($sm) {
+        display: block;
+      }
     }
   }
+
+  &__subtitle-inner{
+
+    @media ($sm) {
+      padding: 0 25px;
+      background-color: $white;
+    }
+  }
+
   &__submit {
     @include reset-button();
     padding: 8px $gutter;
@@ -130,21 +263,43 @@
     text-transform: uppercase;
     background-color: #2aab6d;
     border: 2px solid #2aab6d;
+
+    @media ($sm){
+      width: auto;
+      padding: 10px 40px;
+    }
   }
+
   textarea {
     display: block;
     padding: 5px 22px;
     width: 100%;
     min-height: 200px;
+    margin-top: -18px;
     margin-bottom: 47px;
     border: 2px solid #e5e5e5;
     border-radius: 2px;
     color: $black;
     font-size: 18px;
     resize: none;
+
+    @media ($sm) {
+      margin-top: 0;
+    }
+
     &::placeholder{
       color: $black;
       opacity: 1;
+    }
+  }
+
+  &__footer{
+
+    @media ($sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      order: 99;
     }
   }
 }

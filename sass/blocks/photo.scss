@@ -1,8 +1,17 @@
+@import "../variables";
+
 .photo {
   padding: 0 $gutter;
+
+  @media ($sm) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &--panorama-this-day{
     padding: 0;
     position: relative;
+
     &::before {
       content: 'Панорама дня';
       position: absolute;
@@ -15,36 +24,70 @@
       font-weight: 700;
       line-height: 24px;
       text-transform: uppercase;
+
+      @media ($sm) {
+        top: 57px;
+        right: 40px;
+      }
     }
+
     .photo__description {
-      padding: 0 $gutter * 2;
+      margin-left: $gutter;
+      margin-right: $gutter;
+
+      @media ($sm) {
+        justify-content: space-between;
+      }
+    }
+
+    .photo__comment {
+      order: 1;
     }
   }
+
   &__image {
-    margin-bottom: 20px;
     width: 100%;
+    display: block;
   }
+
   &__description {
-    padding: 0 $gutter;
+    padding: 20px $gutter;
     line-height: 1.7;
+    background-color: #F2F2F2;
+
+    @media ($sm) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+    }
   }
+
   &__comment {
     margin: 0 0 10px;
+
+    @media ($sm) {
+      flex-basis: 100%;
+    }
   }
+
   &__like {
     @include reset-button();
     color: $pink;
+
     svg {
       vertical-align: middle;
       margin-right: 14px;
     }
   }
+
   &__like-count {
 
   }
+
   &__name {
     font-weight: 700;
   }
+
   &__time {
     font-size: 12px;
     font-weight: normal;

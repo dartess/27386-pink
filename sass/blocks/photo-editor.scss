@@ -1,15 +1,57 @@
+@import "../variables";
+
 .photo-editor {
   padding: 20px $gutter 0;
   background-color: #F2F2F2;
-  &__content {
-    display: block;
-    width: 100%;
+
+  @media ($sm) {
+    padding-top: 57px;
+    padding-bottom: 54px;
   }
+
+  &__container{
+    @include container();
+
+    @media ($sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__all-controls{
+
+    @media ($sm) {
+      flex-basis: 275px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+
+    @media ($sm) {
+      flex-basis: 300px;
+    }
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+
   &__controls {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 42px 0 39px;
+    margin: 42px 0 0;
+
+    @media ($sm) {
+      margin: 0;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
+
   &__control-item {
     @include reset-button();
     display: flex;
@@ -19,16 +61,45 @@
     margin: 0 $gutter;
     text-align: center;
     color: #B5B9BE;
+
     &--active {
       color: $pink;
     }
+
+    @media ($sm) {
+      width: 22px;
+      height: 22px;
+      margin: 0;
+      margin-right: 30px;
+
+      svg {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
   }
+
   &__control-bar {
-    margin: 0 $gutter;
+    margin: 30px $gutter;
     height: 2px;
     background-color: $black;
     position: relative;
+    flex-basis: 100%;
+    display: none;
+    order: 99;
+
+    @media ($sm) {
+      display: block;
+      order: 0;
+      flex-basis: 202px;
+      margin: 0;
+    }
+
+    &--active {
+      display: block;
+    }
   }
+
   &__control-spinner {
     display: block;
     position: absolute;
@@ -42,13 +113,27 @@
     border-radius: 50%;
     cursor: pointer;
   }
+
   &__buttons {
-    margin-top: 34px;
     padding: 38px 0 41px;
-    border-top: 1px solid #DDDFE1;
+
+    @media ($sm) {
+      margin-top: auto;
+    }
   }
+
+  &__separator{
+    display: none;
+
+    &--last{
+      display: block;
+      border-top: 1px solid #DDDFE1;
+    }
+  }
+
   &__button {
     margin-bottom: 12px;
+
     &:last-of-type{
       margin-bottom: 0;
     }
