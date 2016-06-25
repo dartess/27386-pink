@@ -1,17 +1,43 @@
 @import "../variables";
+@import "../mixins";
 
 .page-slogan {
   @include container();
-  padding: 54px $gutter;
+  padding: 47px $gutter 50px;
   font-size: 14px;
   text-align: center;
 
   @media ($sm) {
     font-size: 18px;
     max-width: 530px;
+    padding: 92px 15px 76px;
+    line-height: 1.67;
   }
 
   @media ($md) {
+    max-width: 775px;
+    padding-bottom: 88px;
+  }
 
+  &--small {
+
+    @media ($sm) {
+      padding: 64px 15px 69px;
+    }
+  }
+
+  &__hidden-xs {
+    display: none;
+
+    @media ($sm) {
+      display: initial;
+    }
+
+    @media ($md) {
+
+      br {
+        display: none;
+      }
+    }
   }
 }

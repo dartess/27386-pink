@@ -30,6 +30,8 @@
 
   &__link {
     margin-bottom: 33px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     @media ($sm) {
       margin-bottom: 46px;
@@ -59,6 +61,13 @@
     width: 48px;
     height: 56px;
     background: center no-repeat;
+    border: none;
+    font-size: 0;
+    transition: opacity .2s $transition;
+
+    &:hover, &:focus {
+      opacity: .4;
+    }
 
     &--android {
       background-image: url(../../img/logo-android.svg);

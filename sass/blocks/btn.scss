@@ -4,7 +4,7 @@
   @include reset-button();
   display: block;
   width: 100%;
-  padding: 5px;
+  padding: 5px 40px;
   border: 3px solid $pink;
   border-radius: 27px;
   font-size: 18px;
@@ -12,10 +12,30 @@
   text-align: center;
   text-decoration: none;
   color: $pink;
+  transition: background-color .2s $transition, color .2s $transition;
+  background-color: rgba($white, 0);
 
   @media ($md) {
     font-size: 21px;
     padding: 2px;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    background-color: $pink;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, .3);
+  }
+
+  &--no-up {
+
+    @media ($md) {
+      font-size: 18px;
+      padding: 5px 40px;
+    }
   }
 
   &--bold {
@@ -25,10 +45,31 @@
   &--color_white{
     border-color: $white;
     color: $white;
+
+    &:hover, &:focus {
+      background-color: $white;
+      color: $pink;
+    }
+
+    &:active {
+      color: rgba($pink, .3);
+    }
   }
 
   &--color_gray {
-    color: #DDDFE0;
-    border-color: #DDDFE0;
+    color: rgba($blue, .1);
+    border-color: rgba($blue, .1);
+
+    &:hover, &:focus {
+      background-color: rgba($blue, 0);
+      color: rgba($blue, .3);
+      border-color: rgba($blue, .3);
+    }
+
+    &:active {
+      background-color: rgba($blue, .3);
+      border-color: rgba($blue, 0);
+      color: rgba($blue, .3);
+    }
   }
 }

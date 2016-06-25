@@ -1,11 +1,12 @@
 @import "../variables";
 
 .photo {
-  padding: 0 $gutter;
+  padding: 0 20px;
 
   @media ($sm) {
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
 
   &--panorama-this-day{
@@ -16,8 +17,8 @@
       content: 'Панорама дня';
       position: absolute;
       top: 0;
-      right: $gutter;
-      padding: 5px $gutter;
+      right: 20px;
+      padding: 5px 20px;
       background-color: $pink;
       color: $white;
       font-size: 12px;
@@ -29,25 +30,60 @@
         top: 57px;
         right: 40px;
       }
+
+      @media ($md) {
+        top: 55px;
+        right: 130px;
+      }
     }
 
     .photo__description {
-      margin-left: $gutter;
-      margin-right: $gutter;
+      margin-left: 20px;
+      margin-right: 20px;
 
       @media ($sm) {
         justify-content: space-between;
+        width: map-get($container-max-widths, 'sm');
+        margin-left: auto;
+        margin-right: auto;
+        padding: 24px 28px 16px;
+      }
+
+      @media ($md) {
+        padding: 24px 28px 8px;
+        width: map-get($container-max-widths, 'md');
       }
     }
 
     .photo__comment {
       order: 1;
     }
+
+    .photo__like {
+      width: auto;
+
+      svg {
+
+        @media ($sm) {
+          margin-left: 14px;
+        }
+
+        @media ($md) {
+          margin-left: 20px;
+        }
+      }
+    }
   }
 
   &__image {
     width: 100%;
     display: block;
+    border-bottom: none;
+
+    img {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__description {
@@ -59,6 +95,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-grow: 1;
+      padding: 24px 28px;
     }
   }
 
@@ -67,25 +104,50 @@
 
     @media ($sm) {
       flex-basis: 100%;
+      margin-bottom: 17px;
     }
   }
 
   &__like {
     @include reset-button();
     color: $pink;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @media ($sm) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
 
     svg {
       vertical-align: middle;
+      margin-top: -2px;
       margin-right: 14px;
+
+      @media ($sm) {
+        order: 1;
+        margin-right: 0;
+        margin-left: auto;
+      }
     }
   }
 
   &__like-count {
 
+    @media ($sm) {
+      margin-left: 5px;
+    }
   }
 
   &__name {
     font-weight: 700;
+
+    @media ($sm) {
+      margin-bottom: 1px;
+    }
   }
 
   &__time {

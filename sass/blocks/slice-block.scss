@@ -2,41 +2,17 @@
 
 .slice-block {
   position: relative;
-  background-color: $gray-verylight;
+  background: url('../../img/slice.svg') top center/100% 30px no-repeat, $gray-verylight;
   padding-top: 30px;
 
   @media ($sm) {
     padding-top: 50px;
+    background: url('../../img/slice.svg') top center/100% 50px no-repeat, $gray-verylight;
   }
 
   @media ($md) {
     padding-top: 90px;
+    background: url('../../img/slice.svg') top center/100% 90px no-repeat, $gray-verylight;
   }
 
-  &--top-margin {
-    margin-top: 56px;
-
-    @media ($sm) {
-      margin-top: 50px;
-    }
-  }
-
-  &::before {
-    content:'';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 30px;
-    background: url('../../img/slice.svg') center no-repeat;
-    background-size: 100% 100%;
-
-    @media ($sm) {
-      height: 50px;
-    }
-
-    @media ($md) {
-      height: 90px;
-    }
-  }
 }

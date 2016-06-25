@@ -13,9 +13,22 @@
     font-weight: 300;
     margin: 42px 0 27px;
 
+    br {
+      display: none;
+    }
+
     @media ($sm) {
       margin: 46px 0 34px;
       font-size: 40px;
+    }
+
+    @media ($md) {
+      margin: 64px 0 47px;
+      font-size: 50px;
+
+      br {
+        display: inline;
+      }
     }
   }
 
@@ -25,9 +38,14 @@
     padding-right: $gutter;
     padding-bottom: 30px;
     background-color: $white;
+    z-index: 1;
 
     @media ($sm) {
       padding-bottom: 0;
+    }
+
+    @media ($md) {
+      padding-bottom: 30px;
     }
 
     &::after {
@@ -58,11 +76,23 @@
 
   &__item {
     margin: 11px 0;
-    flex-basis: 50%;
     padding: 0 $gutter;
+    flex-basis: 100%;
 
     @media ($sm) {
+      flex-basis: 33%;
       margin-bottom: 37px;
+    }
+
+    @media ($md) {
+
+      &:first-child{
+        order: -10;
+      }
+
+      &:last-child{
+        order: -5;
+      }
     }
   }
 
@@ -74,12 +104,42 @@
     @media ($sm) {
       margin-bottom: 8px;
     }
+
+    @media ($md) {
+      margin-bottom: 25px;
+    }
   }
 
   &__item-value {
     color: $pink;
     font-size: 24px;
     font-weight: 300;
+
+    a[href^=mailto] {
+      text-decoration: none;
+      border-color: rgba($white, 0);
+      transition: border-color .2s $transition, color .2s $transition, opacity .2s $transition;
+
+      &:hover, &:focus {
+        outline: none;
+        color: $blue;
+        border-color: $blue;
+      }
+
+      &:active {
+        opacity: 0.3;
+        border-color: rgba($white, 0);
+      }
+    }
+
+    a[href^=tel] {
+
+      &:focus {
+        outline: none;
+        color: $blue;
+        border-color: $blue;
+      }
+    }
   }
 
   &__map {
@@ -88,6 +148,12 @@
 
     @media ($sm) {
       height: 390px;
+      background: url(../../img/icon-map-marker.svg) center 60% no-repeat, url(../../img/bg-map-tablet@1x.jpg) center/cover no-repeat;
+    }
+
+    @media ($md) {
+      height: 470px;
+      background: url(../../img/icon-map-marker.svg) center 60% no-repeat, url(../../img/bg-map-desktop@1x.jpg) center/cover no-repeat;
     }
   }
 }
