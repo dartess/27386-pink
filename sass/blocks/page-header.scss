@@ -27,6 +27,8 @@
   &--no-js{
 
     .page-header__navigation {
+      box-shadow: 0 1px 0 black;
+      background-color: $blue;
       margin-bottom: 470px;
 
       @media ($sm) {
@@ -40,11 +42,6 @@
 
     .page-header__menu-btn{
       display: none;
-    }
-
-    .page-header__navigation {
-      box-shadow: 0 1px 0 black;
-      background-color: $blue;
     }
   }
 
@@ -75,8 +72,12 @@
   &--open{
 
     .page-header__navigation {
-      background-color: rgba($black, .3);
-      box-shadow: none;
+      box-shadow: 0 1px 0 black;
+      background-color: $blue;
+      @media ($md) {
+        background-color: rgba($black, .3);
+        box-shadow: none;
+      }
     }
 
     .page-header__navigation-inner {
