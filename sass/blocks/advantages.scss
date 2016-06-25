@@ -32,7 +32,7 @@
     br {
       display: none;
 
-      @media ($md) {
+      @media ($sm) {
         display: inline;
       }
     }
@@ -44,8 +44,12 @@
     padding-right: $gutter;
 
     @media ($sm) {
-      margin-top: 24px;
+      margin-top: 49px;
       padding-bottom: 0;
+    }
+
+    @media ($md) {
+      margin-top: 80px;
     }
   }
 
@@ -53,38 +57,108 @@
     @include container();
     display: flex;
     flex-direction: column;
-    padding-top: 11px;
 
     @media ($sm) {
       flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-top: -60px;
     }
 
-    @media ($sm) {
+    @media ($md) {
       flex-direction: column-reverse;
+      margin-top: -106px;
     }
   }
 
   &__phones {
-    height: 320px;
-    background-image: url(../../img/iphone-screen-mobile@1x.png);
-    background-repeat: no-repeat;
-    background-position: center calc(100% + 42px);
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
 
     @media ($sm) {
-      height: 481px;
       width: 50%;
+      justify-content: flex-start;
     }
 
     @media ($md) {
-      height: 298px;
+      justify-content: space-between;
       width: 100%;
+    }
+  }
+
+  &__phone {
+    width: 157px;
+    height: 277px;
+    background: center top/100% no-repeat;
+
+    @media ($sm) {
+      width: 268px;
+      height: 481px;
+    }
+
+    @media ($md) {
+      width: 300px;
+      padding-left: 33px;
+      padding-right: 33px;
+      height: 302px;
+      background-size: contain;
+    }
+
+    &--sentiment{
+      display: none;
+
+      @media ($md) {
+        display: block;
+        background-image: url(../../img/iphone-screen-1-desktop@1x.png);
+
+        @media ($retina) {
+          background-image: url(../../img/iphone-screen-1-desktop@2x.png);
+        }
+      }
+    }
+
+    &--change {
+      display: none;
+
+      @media ($md) {
+        display: block;
+        background-image: url(../../img/iphone-screen-2-desktop@1x.png);
+
+        @media ($retina) {
+          background-image: url(../../img/iphone-screen-2-desktop@2x.png);
+        }
+      }
+    }
+
+    &--friends {
+      background-image: url(../../img/iphone-screen-mobile@1x.png);
+
+      @media ($retina) {
+        background-image: url(../../img/iphone-screen-mobile@2x.png);
+      }
+
+      @media ($sm) {
+        background-image: url(../../img/iphone-screen-3-tablet@1x.png);
+
+        @media ($retina) {
+          background-image: url(../../img/iphone-screen-3-tablet@2x.png);
+        }
+      }
+
+      @media ($md) {
+        background-image: url(../../img/iphone-screen-3-desktop@1x.png);
+
+        @media ($retina) {
+          background-image: url(../../img/iphone-screen-3-desktop@2x.png);
+        }
+      }
     }
   }
 
   &__items {
     display: flex;
     flex-direction: column;
-    padding-top: 11px;
+    padding-top: 79px;
 
     @media ($sm) {
       width: 50%;
@@ -92,17 +166,20 @@
 
     @media ($md) {
       width: 100%;
+      justify-content: space-between;
       flex-direction: row;
+      padding-top: 55px;
     }
   }
 
   &__item {
     line-height: 1.7;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
 
     @media ($sm) {
       margin-bottom: 23px;
+      text-align: left;
     }
 
     @media ($md) {
@@ -116,12 +193,22 @@
 
   &__text {
     margin: 10px 0;
+
+    @media ($md) {
+      font-size: 18px;
+    }
   }
 
   &__title {
     font-size: 18px;
     font-weight: 700;
     color: $black;
+
+    @media ($md) {
+      margin-bottom: 24px;
+      font-size: 30px;
+      line-height: 1;
+    }
   }
 
   &__effect {
@@ -130,8 +217,14 @@
     @media ($sm) {
       @include container();
       @include clearfix();
+      padding-top: 1px;
       display: block;
-      background: url(../../img/) left center no-repeat;
+      background: url(../../img/icon-timer.svg) left center/240px no-repeat;
+    }
+
+    @media ($md) {
+      background-size: 298px 83%;
+      background-position: left 5%;
     }
   }
 
@@ -141,6 +234,12 @@
     width: 50%;
     margin-left: auto;
     text-align: left;
+
+    @media ($md) {
+      width: 61%;
+      margin-bottom: 111px;
+      font-size: 18px;
+    }
   }
 
   &__effect-title{
@@ -150,6 +249,7 @@
     line-height: 1.2;
 
     @media ($md) {
+      margin-bottom: 18px;
 
       br {
         display: none;
@@ -160,5 +260,9 @@
   &__effect-text{
     margin: 0 0 10px;
     line-height: 1.71;
+
+    @media ($md) {
+      margin-bottom: 25px;
+    }
   }
 }

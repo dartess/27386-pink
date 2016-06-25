@@ -17,7 +17,7 @@ $OpenSans: 'OpenSans', 'Arial', sans-serif;
 $grid-breakpoints: (
         xs: 0,
         sm: 700px,
-        md: 992px
+        md: 1200px
 );
 
 $container-max-widths: (
@@ -29,3 +29,7 @@ $sm: "min-width: " + map-get($grid-breakpoints, sm);
 $md: "min-width: " + map-get($grid-breakpoints, md);
 
 $container-min: 320px;
+
+$retina: "min-resolution: 144dpi), (min-resolution: 1.5dppx";
+
+$transition:  cubic-bezier(.22,1,.45,1);

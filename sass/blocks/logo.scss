@@ -1,0 +1,77 @@
+@import "../variables";
+
+.logo {
+  opacity: 1;
+  transition: opacity .2s $transition;
+
+  &[href]:hover, &[href]:focus {
+    outline: none;
+
+    .logo__element {
+      fill: $pink;
+    }
+  }
+
+  &[href]:active {
+
+    opacity: .3;
+    .logo__element {
+      fill: $white;
+    }
+  }
+
+  &--footer {
+
+    &[href]:active {
+
+      opacity: .3;
+      .logo__element {
+        fill: $blue;
+      }
+    }
+
+    .logo__element {
+      fill: $blue;
+    }
+  }
+
+  &__xs {
+    display: block;
+
+    @media ($sm) {
+      display: none;
+    }
+  }
+
+  &__sm {
+    display: none;
+
+    @media ($sm) {
+      display: block;
+    }
+
+    @media ($md) {
+      display: none;
+    }
+  }
+
+  &__xs-sm {
+
+    @media ($md) {
+      display: none;
+    }
+  }
+
+  &__md {
+    display: none;
+
+    @media ($md) {
+      display: block;
+    }
+  }
+
+  &__element {
+    fill: $white;
+    transition: fill .2s $transition;
+  }
+}

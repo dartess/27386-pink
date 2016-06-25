@@ -16,5 +16,16 @@
     font-size: 0;
     text-decoration: none;
     color: $pink;
+    transition: border-color .2s $transition, opacity .2s $transition;
+
+    &:hover, &:focus {
+      outline: none;
+      border-color: $black;
+    }
+
+    &:active {
+      border-color: #EDEEF0;
+      opacity: .3;
+    }
   }
 }

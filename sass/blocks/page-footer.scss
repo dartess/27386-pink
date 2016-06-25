@@ -11,6 +11,11 @@
     align-items: baseline;
   }
 
+  @media ($md) {
+    padding-top: 70px;
+    padding-bottom: 29px;
+  }
+
   &--main{
     display: none;
 
@@ -20,26 +25,45 @@
   }
 
   &__logo {
+    display: block;
+    border-bottom: none;
     font-size: 0;
-    margin-bottom: 40px;
-
-    a {
-      border-bottom: none;
-    }
+margin-bottom: 40px;
   }
 
   &__copyright {
+
+    @media ($md) {
+      font-size: 18px;
+    }
 
     a {
       font-size: 0;
       margin-left: 5px;
       color: $pink;
       border-bottom: none;
+      &:hover, &:focus {
+        outline: none;
+
+        svg {
+          fill: $black;
+        }
+      }
     }
 
     svg {
       vertical-align: middle;
       margin-left: 5px;
+      transition: opacity .2s $transition, fill .2s $transition;
+      fill: $pink;
+
+      &:hover {
+        fill: $black;
+      }
+
+      &:active {
+        opacity: .3;
+      }
     }
   }
 

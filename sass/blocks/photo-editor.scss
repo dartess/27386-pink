@@ -9,22 +9,23 @@
     padding-bottom: 54px;
   }
 
-  &__container{
+  @media ($md) {
+    max-width: map-get($container-max-widths, 'md');
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__container {
     @include container();
 
     @media ($sm) {
       display: flex;
       justify-content: space-between;
     }
-  }
-
-  &__all-controls{
-
-    @media ($sm) {
-      flex-basis: 275px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    @media ($md) {
+      max-width: 800px;
     }
   }
 
@@ -33,9 +34,34 @@
     @media ($sm) {
       flex-basis: 300px;
     }
-    img{
+    img {
       display: block;
       width: 100%;
+    }
+  }
+
+  &__all-controls {
+
+    @media ($sm) {
+      flex-basis: 275px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @media ($md) {
+      flex-basis: 410px;
+    }
+  }
+
+  &__photo-params {
+    display: flex;
+    flex-direction: column;
+
+    @media ($sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: -17px;
     }
   }
 
@@ -48,7 +74,18 @@
     @media ($sm) {
       margin: 0;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  }
+
+  &__control-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media ($sm) {
+      flex-grow: 1;
     }
   }
 
@@ -56,21 +93,54 @@
     @include reset-button();
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 44px;
     height: 44px;
     margin: 0 $gutter;
     text-align: center;
-    color: #B5B9BE;
+    color: $blue;
+    opacity: .3;
+    transition: opacity .2s $transition, color .2s $transition;
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $pink;
+    }
 
     &--active {
       color: $pink;
+      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     @media ($sm) {
       width: 22px;
       height: 22px;
-      margin: 0;
-      margin-right: 30px;
+      margin: 26px 30px 26px 8px;
+      color: $pink;
+      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    @media ($md) {
+      width: 44px;
+      height: 44px;
+      margin: 14px 40px 14px 0;
 
       svg {
         max-width: 100%;
@@ -84,15 +154,17 @@
     height: 2px;
     background-color: $black;
     position: relative;
-    flex-basis: 100%;
     display: none;
-    order: 99;
 
     @media ($sm) {
       display: block;
       order: 0;
-      flex-basis: 202px;
-      margin: 0;
+      margin: auto 0;
+    }
+
+    @media ($md) {
+      margin-right: 28px;
+      margin-left: 9px;
     }
 
     &--active {
@@ -101,17 +173,41 @@
   }
 
   &__control-spinner {
+    @include reset-button();
     display: block;
     position: absolute;
     width: 14px;
     height: 14px;
     left: 0;
-    top: 0;
+    top: 1px;
     transform: translate(-50%, -50%);
     background-color: #f2f2f2;
     border: 2px solid $pink;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color .2s $transition;
+
+    &:hover, &:focus, &:active {
+      outline: none;
+      background-color: $pink;
+    }
+  }
+
+  &__separator {
+    display: none;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #DDDFE1;
+    width: 100%;
+
+    @media ($sm) {
+      display: block;
+    }
+
+    &--last {
+      display: block;
+      border-bottom: 1px solid #DDDFE1;
+    }
   }
 
   &__buttons {
@@ -119,23 +215,32 @@
 
     @media ($sm) {
       margin-top: auto;
+      padding: 0;
+      padding-right: 13px;
     }
-  }
 
-  &__separator{
-    display: none;
-
-    &--last{
-      display: block;
-      border-top: 1px solid #DDDFE1;
+    @media ($md) {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
   &__button {
     margin-bottom: 12px;
 
-    &:last-of-type{
+    @media ($sm) {
+      margin-bottom: 25px;
+    }
+
+    @media ($md) {
       margin-bottom: 0;
+      margin-right: 41px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+      margin-right: 0;
     }
   }
 }

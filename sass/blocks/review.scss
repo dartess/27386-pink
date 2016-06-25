@@ -13,12 +13,13 @@
 
   @media ($md) {
     padding-top: 73px;
+    padding-bottom: 33px;
 
     &::before {
       display: block;
       width: 79px;
       height: 63px;
-      background-color: #efefef;
+      background: url(../../img/icon-quotes.svg) center/contain no-repeat;
       content: '';
       order: -10;
     }

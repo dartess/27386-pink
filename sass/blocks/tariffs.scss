@@ -1,15 +1,23 @@
 @import "../variables";
 
 .tariffs {
-  margin-top: 30px;
-  margin-bottom: -2px;
+  margin-top: 57px;
+  margin-bottom: 32px;
   padding: 0 $gutter;
   text-transform: uppercase;
 
   @media ($sm) {
-    margin-top: 12px;
+    margin-top: 38px;
     margin-bottom: 68px;
     display: flex;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media ($md) {
+    margin-top: 62px;
+    margin-bottom: 95px;
   }
 
   &__item {
@@ -37,6 +45,10 @@
 
     @media ($sm) {
       padding-bottom: 15px;
+    }
+
+    @media ($sm) {
+      padding-bottom: 24px;
     }
 
     &::before {
@@ -72,6 +84,10 @@
     @media ($sm) {
       font-size: 16px;
     }
+
+    @media ($md) {
+      font-size: 18px;
+    }
   }
 
   &__title-price {
@@ -81,6 +97,10 @@
 
     @media ($sm) {
       font-size: 18px;
+    }
+
+    @media ($md) {
+      font-size: 24px;
     }
   }
 
@@ -104,6 +124,10 @@
       height: 47px;
       background-position: center;
     }
+
+    @media ($md) {
+      padding: 30.5px 22px;
+    }
   }
 
   &__legend {
@@ -123,6 +147,14 @@
         font-size: 14px;
         text-transform: none;
         padding: 15px 0 15px 18px;
+      }
+    }
+
+    @media ($md) {
+
+      .tariffs__data-item {
+        font-size: 18px;
+        padding: 30.5px 22px;
       }
     }
   }

@@ -33,6 +33,7 @@
 
 body {
   min-width: $container-min;
+  overflow-x: hidden;
   font-family: $OpenSans;
   font-weight: normal;
   font-size: 14px;
@@ -51,7 +52,7 @@ input, textarea, select {
   }
 }
 
-[href^="tel"], [href^="mailto"] {
+[href^="tel"] {
   cursor: default;
   color: inherit;
   border-bottom: none;
@@ -69,6 +70,16 @@ label, button {
 
 a{
   color: $pink;
-  border-bottom: 1px solid $pink;
+  border-bottom: 1px solid;
   text-decoration: none;
+  transition: color .2s $transition, opacity .2s $transition, border-color .2s $transition;
+
+  &[href]:hover, &[href]:focus {
+    outline: none;
+    color: $black;
+  }
+
+  &:active {
+    border-color: rgba($black, 0);
+  }
 }
