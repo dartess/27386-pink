@@ -4,53 +4,70 @@
   color: $white;
   font-size: 18px;
   font-weight: 700;
-  background: $blue url(../../img/bg-back-mobile@1x.jpg) center top no-repeat;
+  background: $blue url(../img/bg-back-mobile@1x.jpg) center top no-repeat;
 
   @media ($retina) {
-    background-image: url(../../img/bg-back-mobile@2x.jpg);
+    background-image: url(../img/bg-back-mobile@2x.jpg);
   }
 
   @media ($sm) {
-    background-image: url(../../img/bg-back-tablet@1x.jpg);
+    background-image: url(../img/bg-back-tablet@1x.jpg);
     background-position: center;
     background-size: cover;
 
     @media ($retina) {
-      background-image: url(../../img/bg-back-tablet@2x.jpg);
+      background-image: url(../img/bg-back-tablet@2x.jpg);
     }
   }
 
   @media ($md) {
-    background-image: url(../../img/bg-back-desktop@1x.jpg);
+    background-image: url(../img/bg-back-desktop@1x.jpg);
   }
 
   &--no-js{
 
+    .page-header__navigation {
+      margin-bottom: 470px;
+
+      @media ($sm) {
+        margin-bottom: 300px;
+      }
+
+      @media ($md) {
+        margin-bottom: 0;
+      }
+    }
+
     .page-header__menu-btn{
       display: none;
+    }
+
+    .page-header__navigation {
+      box-shadow: 0 1px 0 black;
+      background-color: $blue;
     }
   }
 
   &--main{
-    background: url(../../img/iphone-hand-mobile@1x.png) left 172px no-repeat, $blue url(../../img/bg-back-mobile@1x.jpg) center top no-repeat;
+    background: url(../img/iphone-hand-mobile@1x.png) left 172px no-repeat, $blue url(../img/bg-back-mobile@1x.jpg) center top no-repeat;
 
     @media ($retina) {
-      background: url(../../img/iphone-hand-mobile@2x.png) left 172px no-repeat, $blue url(../../img/bg-back-mobile@2x.jpg) center top no-repeat;
+      background: url(../img/iphone-hand-mobile@2x.png) left 172px no-repeat, $blue url(../img/bg-back-mobile@2x.jpg) center top no-repeat;
     }
 
     @media ($sm) {
-      background: url(../../img/iphone-hand-tablet@1x.png) 50% bottom no-repeat, $blue url(../../img/bg-back-tablet@1x.jpg) center/cover no-repeat;
+      background: url(../img/iphone-hand-tablet@1x.png) 50% bottom no-repeat, $blue url(../img/bg-back-tablet@1x.jpg) center/cover no-repeat;
 
       @media ($retina) {
-        background: url(../../img/iphone-hand-tablet@2x.png) 50% bottom no-repeat, $blue url(../../img/bg-back-tablet@2x.jpg) center/cover no-repeat;
+        background: url(../img/iphone-hand-tablet@2x.png) 50% bottom no-repeat, $blue url(../img/bg-back-tablet@2x.jpg) center/cover no-repeat;
       }
     }
 
     @media ($md) {
-      background: url(../../img/iphone-hand-desktop@1x.png) calc(50% + 70px) bottom no-repeat, $blue url(../../img/bg-back-desktop@1x.jpg) center/cover no-repeat;
+      background: url(../img/iphone-hand-desktop@1x.png) calc(50% + 70px) bottom no-repeat, $blue url(../img/bg-back-desktop@1x.jpg) center/cover no-repeat;
 
       @media ($retina) {
-        background: url(../../img/iphone-hand-desktop@2x.png) calc(50% + 70px) bottom no-repeat, $blue url(../../img/bg-back-desktop@1x.jpg) center/cover no-repeat;
+        background: url(../img/iphone-hand-desktop@2x.png) calc(50% + 70px) bottom no-repeat, $blue url(../img/bg-back-desktop@1x.jpg) center/cover no-repeat;
       }
     }
   }
@@ -58,8 +75,8 @@
   &--open{
 
     .page-header__navigation {
-      box-shadow: 0 1px 0 black;
-      background-color: $blue;
+      background-color: rgba($black, .3);
+      box-shadow: none;
     }
 
     .page-header__navigation-inner {

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PINK&nbsp;| Главная</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-<header class="page-header page-header--main page-header--no-js">
+<header class="page-header page-header--main page-header--no-js page-header--open">
     <div class="page-header__navigation">
         <div class="page-header__top-strip">
             <a class="page-header__logo logo">
@@ -61,6 +61,13 @@
         <div class="download__comment">Доступно для iPhone, iPad, Android, Windows Phone, OS&nbsp;X, Windows 8</div>
     </section>
 </header>
+<script>
+    (function(){
+        var header = document.querySelector('.page-header');
+        header.classList.remove('page-header--no-js');
+        header.classList.remove('page-header--open');
+    })();
+</script>
 
 <section class="advantages">
     <div class="advantages__slogan">
@@ -297,11 +304,7 @@
     </div>
 </footer>
 
-<script src="js/plugins/picturefill.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/minislider.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/app.js"></script>
+<script src="js/script.min.js"></script>
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script>
@@ -325,6 +328,8 @@
         });
 
         myMap.geoObjects.add(myPlacemark);
+
+        myMap.behaviors.disable('scrollZoom');
     }
 </script>
 

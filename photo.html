@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PINK | Фотографии</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-<header class="page-header page-header--no-js">
+<header class="page-header page-header--no-js page-header--open">
     <div class="page-header__navigation">
         <div class="page-header__top-strip">
             <a class="page-header__logo logo" href="index.html">
@@ -50,6 +50,13 @@
     </div>
     <h1 class="page-header__title">Фотографии <br>пользователей</h1>
 </header>
+<script>
+    (function(){
+        var header = document.querySelector('.page-header');
+        header.classList.remove('page-header--no-js');
+        header.classList.remove('page-header--open');
+    })();
+</script>
 
 <div class="page-slogan">
     Взгляните на&nbsp;фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не&nbsp;хватает ваших?
@@ -299,7 +306,7 @@
     Выкладывайте все, что накопилось в&nbsp;телефоне!
 </div>
 
-<div class="photo-editor">
+<div class="photo-editor js-only">
     <div class="photo-editor__container">
         <div class="photo-editor__content">
             <img src="img/photo-7-mobile@1x.jpg" alt="" class="">
@@ -413,11 +420,7 @@
     </div>
 </footer>
 
-<script src="js/plugins/picturefill.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/minislider.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/app.js"></script>
+<script src="js/script.min.js"></script>
 
 </body>
 </html>

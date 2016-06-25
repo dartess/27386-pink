@@ -1,3 +1,5 @@
+"use strict";
+
 function MiniSlider(wrapper) {
 
     var _this = this;
@@ -32,10 +34,10 @@ function MiniSlider(wrapper) {
     };
 
     Array.prototype.forEach.call(this.dom.sliderDots, function (dot, dotItem) {
-        dot.addEventListener('click', _this.toSlide.bind(_this, dotItem))
+        dot.addEventListenerMulti(['click', 'touchend'], _this.toSlide.bind(_this, dotItem))
     });
-    this.dom.sliderArrowPrev.addEventListener('click', this.toSlide.bind(this, 'prev'));
-    this.dom.sliderArrowNext.addEventListener('click', this.toSlide.bind(this, 'next'));
+    this.dom.sliderArrowPrev.addEventListenerMulti(['click', 'touchend'], this.toSlide.bind(this, 'prev'));
+    this.dom.sliderArrowNext.addEventListenerMulti(['click', 'touchend'], this.toSlide.bind(this, 'next'));
 
     this.recalculateHeight();
     window.addEventListener('resize', this.recalculateHeight.bind(this));

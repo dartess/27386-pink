@@ -94,7 +94,7 @@
 
     &--apps {
 
-      @media ($sm) {
+      @media ($md) {
         flex-basis: auto;
         width: 46.3%;
         padding-left: 74px;
@@ -139,7 +139,7 @@
 
   input[type=checkbox]:checked + &__checkbox {
     &::before {
-      background-image: url(../../img/tick.svg);
+      background-image: url(../img/tick.svg);
     }
   }
 
@@ -230,11 +230,11 @@
       background: #e5e5e5 center no-repeat;
 
       &--phone {
-        background-image: url(../../img/icon-phone.svg);
+        background-image: url(../img/icon-phone.svg);
       }
 
       &--email {
-        background-image: url(../../img/icon-mail.svg);
+        background-image: url(../img/icon-mail.svg);
       }
     }
   }

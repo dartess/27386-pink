@@ -8,7 +8,7 @@ document.ready = function(fn) {
     }
 };
 
-Element.prototype.addEventListenerMulti = function(events, fn){
+EventTarget.prototype.addEventListenerMulti = function(events, fn){
     var _this = this;
     events.forEach(function(event){
         _this.addEventListener(event, fn);
