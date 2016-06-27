@@ -51,13 +51,15 @@ gulp.task("scripts", function () {
             "js/common.js",
             "js/minislider.js",
             "js/menu.js",
+            "js/map.js",
             "js/app.js"
         ])
         .pipe(concat("script.js"))
         .pipe(gulp.dest("build/js"))
         .pipe(rename("script.min.js"))
         .pipe(uglify())
-        .pipe(gulp.dest("build/js"));
+        .pipe(gulp.dest("build/js"))
+        .pipe(server.reload({stream: true}));
 });
 
 gulp.task("raster", function () {
@@ -101,7 +103,7 @@ gulp.task("serve", function () {
 
     gulp.watch("sass/**/*.{scss,sass}", ["style"]);
     gulp.watch("js/**/*.js", ["scripts"]);
-    gulp.watch("*.html").on("change", server.reload);
+    gulp.watch("*.html", ["copy"]);
 });
 
 gulp.task("copy", function () {
@@ -112,6 +114,7 @@ gulp.task("copy", function () {
             base: "."
         })
         .pipe(gulp.dest("build"))
+        .pipe(server.reload({stream: true}));
 });
 
 gulp.task("clean", function () {

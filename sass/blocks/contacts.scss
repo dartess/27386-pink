@@ -86,11 +86,11 @@
 
     @media ($md) {
 
-      &:first-child{
+      &:first-child {
         order: -10;
       }
 
-      &:last-child{
+      &:last-child {
         order: -5;
       }
     }

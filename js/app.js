@@ -12,6 +12,6 @@ document.ready(function () {
 document.ready(function(){
     var jsBlocks = document.querySelectorAll('.js-only');
     Array.prototype.forEach.call(jsBlocks, function (jsBlock) {
-        jsBlock.removeClass('js-only');
+        jsBlock.classList.remove('js-only');
     });
 });

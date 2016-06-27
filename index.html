@@ -62,6 +62,7 @@
     </section>
 </header>
 <script>
+    // критичный js - скрывает открытую навигацию сразу после построения DOM'а, исключая мелькание
     (function(){
         var header = document.querySelector('.page-header');
         header.classList.remove('page-header--no-js');
@@ -304,34 +305,8 @@
     </div>
 </footer>
 
-<script src="js/script.min.js"></script>
-
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script>
-    ymaps.ready(init);
-    var myMap, myPlacemark;
-
-    function init(){
-        myMap = new ymaps.Map("map", {
-            center: [59.939631, 30.323055],
-            zoom: 14,
-            controls: ["zoomControl"]
-        });
-
-        myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
-            hintContent: 'Мы тут!'
-        }, {
-            iconLayout: 'default#image',
-            iconImageHref: 'img/icon-map-marker.svg',
-            iconImageSize: [36, 36],
-            iconImageOffset: [-18, -18]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-
-        myMap.behaviors.disable('scrollZoom');
-    }
-</script>
+<script src="js/script.min.js"></script>
 
 </body>
 </html>

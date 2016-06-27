@@ -47,6 +47,7 @@ img {
 
 input, textarea, select {
   background-color: $input-bg;
+
   &:-webkit-autofill {
     box-shadow: inset 0 0 0 1000px $input-bg;
   }
@@ -58,6 +59,7 @@ input, textarea, select {
   border-bottom: none;
   white-space: nowrap;
   text-decoration: none;
+
   &:hover, &:focus, &:active {
     color: inherit;
     text-decoration: none;
@@ -68,7 +70,7 @@ label, button {
   cursor: pointer;
 }
 
-a{
+a {
   color: $pink;
   border-bottom: 1px solid;
   text-decoration: none;
