@@ -467,33 +467,16 @@
   }
 
   &__submit {
-    @include reset-button();
     padding: 12px 17px;
     display: block;
     width: 100%;
-    font-size: 18px;
-    font-weight: 700;
-    color: $white;
-    text-transform: uppercase;
-    background-color: #2aab6d;
-    transition: background-color .2s $transition, color .2s $transition;
-
-    &:hover, &:focus {
-      background-color: #1c9b5e;
-      outline: none;
-    }
-
-    &:active {
-      color: rgba($white, .3);
-    }
-
-    &[disabled] {
-      cursor: not-allowed;
-      background-color: #e5e5e5;
-    }
 
     @media ($sm) {
       width: auto;
+      padding: 12px 58px;
+    }
+
+    @media ($md) {
       padding: 12px 58px;
     }
   }

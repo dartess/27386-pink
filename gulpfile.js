@@ -52,6 +52,7 @@ gulp.task("scripts", function () {
             "js/minislider.js",
             "js/menu.js",
             "js/map.js",
+            "js/form.js",
             "js/app.js"
         ])
         .pipe(concat("script.js"))

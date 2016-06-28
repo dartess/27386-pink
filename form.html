@@ -152,7 +152,7 @@
     </div>
 
     <footer class="form__footer">
-        <button class="form__submit" type="submit">Отправить форму</button>
+        <button class="form__submit btn btn--color_green" type="submit">Отправить форму</button>
         <div class="form__note">
             <span class="form__note-accent">*</span>
             &mdash; обязательные <span class="form__note-md-visible">для заполнения </span>поля
@@ -219,6 +219,26 @@
         </a>
     </div>
 </footer>
+
+<div class="modal" id="form-fail">
+    <div class="modal__content">
+        <div class="modal__title">Что-то пошло не&nbsp;так!</div>
+        <div class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</div>
+        <button class="btn btn--full btn--color_green btn--close-modal" type="button">ОК</button>
+    </div>
+</div>
+
+<div class="modal modal--big" id="form-success">
+    <div class="modal__content">
+        <div class="modal__title">Ваша заявка отправлена</div>
+        <div class="modal__text">
+            Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы рассмотрим ее и оповестим вас.
+        </div>
+    </div>
+    <div class="modal__footer">
+        <button class="btn btn--full btn--color_green btn--close-modal" type="button">Закрыть окно</button>
+    </div>
+</div>
 
 <script src="js/script.min.js"></script>
 
