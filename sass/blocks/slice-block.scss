@@ -2,17 +2,17 @@
 
 .slice-block {
   position: relative;
-  background: url('../../img/slice.svg') top center/100% 30px no-repeat, $gray-verylight;
+  background: url('../img/slice.svg') top center/100% 30px no-repeat, $gray-verylight;
   padding-top: 30px;
 
   @media ($sm) {
     padding-top: 50px;
-    background: url('../../img/slice.svg') top center/100% 50px no-repeat, $gray-verylight;
+    background: url('../img/slice.svg') top center/100% 50px no-repeat, $gray-verylight;
   }
 
   @media ($md) {
     padding-top: 90px;
-    background: url('../../img/slice.svg') top center/100% 90px no-repeat, $gray-verylight;
+    background: url('../img/slice.svg') top center/100% 90px no-repeat, $gray-verylight;
   }
 
 }

@@ -55,7 +55,7 @@
       top: 100%;
       right: 0;
       height: 30px;
-      background: url('../../img/bg-triangle-white-footer.svg') center no-repeat;
+      background: url('../img/bg-triangle-white-footer.svg') center no-repeat;
       background-size: 100% 100%;
 
       @media ($sm) {
@@ -86,11 +86,11 @@
 
     @media ($md) {
 
-      &:first-child{
+      &:first-child {
         order: -10;
       }
 
-      &:last-child{
+      &:last-child {
         order: -5;
       }
     }
@@ -144,16 +144,16 @@
 
   &__map {
     height: 200px;
-    background: url(../../img/icon-map-marker.svg) center 60% no-repeat, url(../../img/bg-map-mobile@1x.png) center/cover no-repeat;
+    background: url(../img/icon-map-marker.svg) center 60% no-repeat, url(../img/bg-map-mobile@1x.png) center/cover no-repeat;
 
     @media ($sm) {
       height: 390px;
-      background: url(../../img/icon-map-marker.svg) center 60% no-repeat, url(../../img/bg-map-tablet@1x.jpg) center/cover no-repeat;
+      background: url(../img/icon-map-marker.svg) center 60% no-repeat, url(../img/bg-map-tablet@1x.jpg) center/cover no-repeat;
     }
 
     @media ($md) {
       height: 470px;
-      background: url(../../img/icon-map-marker.svg) center 60% no-repeat, url(../../img/bg-map-desktop@1x.jpg) center/cover no-repeat;
+      background: url(../img/icon-map-marker.svg) center 60% no-repeat, url(../img/bg-map-desktop@1x.jpg) center/cover no-repeat;
     }
   }
 }

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PINK&nbsp;| Фотографии</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-<header class="page-header page-header--no-js">
+<header class="page-header page-header--no-js page-header--open">
     <div class="page-header__navigation">
         <div class="page-header__top-strip">
             <a class="page-header__logo logo" href="index.html">
@@ -53,6 +53,14 @@
     </div>
     <h1 class="page-header__title">Конкурс на&nbsp;самое безбашеное <br>путешествие с&nbsp;Пинк</h1>
 </header>
+<script>
+    // критичный js - скрывает открытую навигацию сразу после построения DOM'а, исключая мелькание
+    (function(){
+        var header = document.querySelector('.page-header');
+        header.classList.remove('page-header--no-js');
+        header.classList.remove('page-header--open');
+    })();
+</script>
 
 <div class="page-slogan">
     Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную
@@ -82,18 +90,24 @@
                 Ваши безбашенные достижения&nbsp;в&nbsp;путешествии
             </span>
         </div>
-        <input type="checkbox" checked id="achievements-selfie" name="achievements-selfie">
-        <label class="form__checkbox" for="achievements-selfie">Сделал селфи с&nbsp;акулой</label>
-        <input type="checkbox" checked id="achievements-beach" name="achievements-beach">
-        <label class="form__checkbox" for="achievements-beach">Обгорел на&nbsp;пляже</label>
-        <input type="checkbox" id="achievements-norris" name="achievements-norris">
-        <label class="form__checkbox" for="achievements-norris">Видел Чака Норриса</label>
-        <input type="checkbox" id="achievements-souvenirs" name="achievements-souvenirs">
-        <label class="form__checkbox" for="achievements-souvenirs">Накупил сувениров</label>
-        <input type="checkbox" checked id="achievements-tower" name="achievements-tower">
-        <label class="form__checkbox" for="achievements-tower">Удержал башню</label>
-        <input type="checkbox" id="achievements-hotel" name="achievements-hotel">
-        <label class="form__checkbox" for="achievements-hotel">Разгромил отель</label>
+        <div class="form__block-col">
+            <input type="checkbox" checked id="achievements-selfie" name="achievements-selfie">
+            <label class="form__checkbox" for="achievements-selfie">Сделал селфи с&nbsp;акулой</label>
+            <input type="checkbox" checked id="achievements-beach" name="achievements-beach">
+            <label class="form__checkbox" for="achievements-beach">Обгорел на&nbsp;пляже</label>
+        </div>
+        <div class="form__block-col">
+            <input type="checkbox" id="achievements-norris" name="achievements-norris">
+            <label class="form__checkbox" for="achievements-norris">Видел Чака Норриса</label>
+            <input type="checkbox" id="achievements-souvenirs" name="achievements-souvenirs">
+            <label class="form__checkbox" for="achievements-souvenirs">Накупил сувениров</label>
+        </div>
+        <div class="form__block-col">
+            <input type="checkbox" checked id="achievements-tower" name="achievements-tower">
+            <label class="form__checkbox" for="achievements-tower">Удержал башню</label>
+            <input type="checkbox" id="achievements-hotel" name="achievements-hotel">
+            <label class="form__checkbox" for="achievements-hotel">Разгромил отель</label>
+        </div>
     </div>
 
     <div class="form__block form__block--border form__block--contacts">
@@ -206,11 +220,7 @@
     </div>
 </footer>
 
-<script src="js/plugins/picturefill.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/minislider.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/app.js"></script>
+<script src="js/script.min.js"></script>
 
 </body>
 </html>

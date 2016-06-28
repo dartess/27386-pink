@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PINK | Фотографии</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-<header class="page-header page-header--no-js">
+<header class="page-header page-header--no-js page-header--open">
     <div class="page-header__navigation">
         <div class="page-header__top-strip">
             <a class="page-header__logo logo" href="index.html">
@@ -50,6 +50,14 @@
     </div>
     <h1 class="page-header__title">Фотографии <br>пользователей</h1>
 </header>
+<script>
+    // критичный js - скрывает открытую навигацию сразу после построения DOM'а, исключая мелькание
+    (function(){
+        var header = document.querySelector('.page-header');
+        header.classList.remove('page-header--no-js');
+        header.classList.remove('page-header--open');
+    })();
+</script>
 
 <div class="page-slogan">
     Взгляните на&nbsp;фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не&nbsp;хватает ваших?
@@ -61,34 +69,31 @@
             <picture>
                 <source media="(min-width: 1200px)"
                         srcset="img/panorama-desktop@1x.jpg 1x,
-                        img/panorama-desktop@2x.jpg 2x"
-                        sizes="100vw">
+                        img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 700px)"
                         srcset="img/panorama-tablet@1x.jpg 1x,
-                        img/panorama-tablet@2x.jpg 2x"
-                        sizes="100vw">
-                <img src="img/panorama-mobile@1x.jpg"
-                     srcset="img/panorama-mobile@2x.jpg 2x"
-                     sizes="100vw">
+                        img/panorama-tablet@2x.jpg 2x">
+                <img src="img/panorama-mobile@1x.jpg" alt=""
+                     srcset="img/panorama-mobile@2x.jpg 2x">
             </picture>
         </a>
 
         <div class="photo__description">
             <div class="photo__name">
                 Анна
-                <time class="photo__time">(5&nbsp;минут назад)</time>
+                <time  class="photo__time" datetime="2016-07-15T10:00">(5&nbsp;минут назад)</time>
             </div>
             <p class="photo__comment">
                 Прыгать или нет? Напишите в&nbsp;коментарии свой совет и&nbsp;смотрите прямую транслацию
                 в&nbsp;перископе, задавайте свои вопросы!
             </p>
-            <button type="button" class="photo__like">
+            <a class="photo__like" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
                     <path fill="currentColor"
                           d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
                 </svg>
                 Нравится: <span class="photo__like-count">215</span>
-            </button>
+            </a>
         </div>
     </div>
 </div>
@@ -99,32 +104,30 @@
         <picture>
             <source media="(min-width: 1200px)"
                     srcset="img/photo-1-desktop@1x.jpg 1x,
-                        img/photo-1-desktop@2x.jpg 2x"
-                    sizes="25vw">
+                        img/photo-1-desktop@2x.jpg 2x">
             <source media="(min-width: 700px)"
                     srcset="img/photo-1-tablet@1x.jpg 1x,
-                        img/photo-1-tablet@2x.jpg 2x"
-                    sizes="40vw">
-            <img src="img/photo-1-mobile@1x.jpg"
+                        img/photo-1-tablet@2x.jpg 2x">
+            <img src="img/photo-1-mobile@1x.jpg" alt=""
                  srcset="img/photo-1-mobile@2x.jpg 2x"
-                 sizes="100vw" class="photo__image">
+                 class="photo__image">
         </picture>
         </a>
         <div class="photo__description">
             <div class="photo__name">
                 Левон
-                <time class="photo__time">(5&nbsp;часов назад)</time>
+                <time  class="photo__time" datetime="2016-07-15T10:00">(5&nbsp;часов назад)</time>
             </div>
             <p class="photo__comment">
                 Вчера он&nbsp;на&nbsp;луну летал, сегодня в&nbsp;руки к&nbsp;нам попал.
             </p>
-            <button type="button" class="photo__like">
+            <a class="photo__like" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
                     <path fill="currentColor"
                           d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
                 </svg>
                 Нравится: <span class="photo__like-count">356</span>
-            </button>
+            </a>
         </div>
     </div>
     <div class="photos__item photo">
@@ -132,32 +135,30 @@
         <picture>
             <source media="(min-width: 1200px)"
                     srcset="img/photo-2-desktop@1x.jpg 1x,
-                        img/photo-2-desktop@2x.jpg 2x"
-                    sizes="25vw">
+                        img/photo-2-desktop@2x.jpg 2x">
             <source media="(min-width: 700px)"
                     srcset="img/photo-2-tablet@1x.jpg 1x,
-                        img/photo-2-tablet@2x.jpg 2x"
-                    sizes="40vw">
-            <img src="img/photo-2-mobile@1x.jpg"
+                        img/photo-2-tablet@2x.jpg 2x">
+            <img src="img/photo-2-mobile@1x.jpg" alt=""
                  srcset="img/photo-2-mobile@2x.jpg 2x"
-                 sizes="100vw" class="photo__image">
+                 class="photo__image">
         </picture>
         </a>
         <div class="photo__description">
             <div class="photo__name">
                 Антон
-                <time class="photo__time">(12&nbsp;часов назад)</time>
+                <time  class="photo__time" datetime="2016-07-15T10:00">(12&nbsp;часов назад)</time>
             </div>
             <p class="photo__comment">
                 Соседи будут рады!
             </p>
-            <button type="button" class="photo__like">
+            <a class="photo__like" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
                     <path fill="currentColor"
                           d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
                 </svg>
                 Нравится: <span class="photo__like-count">666</span>
-            </button>
+            </a>
         </div>
     </div>
     <div class="photos__item photo">
@@ -165,32 +166,30 @@
         <picture>
             <source media="(min-width: 1200px)"
                     srcset="img/photo-3-desktop@1x.jpg 1x,
-                        img/photo-3-desktop@2x.jpg 2x"
-                    sizes="25vw">
+                        img/photo-3-desktop@2x.jpg 2x">
             <source media="(min-width: 700px)"
                     srcset="img/photo-3-tablet@1x.jpg 1x,
-                        img/photo-3-tablet@2x.jpg 2x"
-                    sizes="40vw">
-            <img src="img/photo-3-mobile@1x.jpg"
+                        img/photo-3-tablet@2x.jpg 2x">
+            <img src="img/photo-3-mobile@1x.jpg" alt=""
                  srcset="img/photo-3-mobile@2x.jpg 2x"
-                 sizes="100vw" class="photo__image">
+                 class="photo__image">
         </picture>
         </a>
         <div class="photo__description">
             <div class="photo__name">
                 Борис
-                <time class="photo__time">(20&nbsp;часов назад)</time>
+                <time  class="photo__time" datetime="2016-07-15T10:00">(20&nbsp;часов назад)</time>
             </div>
             <p class="photo__comment">
                 Здесь могла быть ваша цитата о&nbsp;высоком и&nbsp;вечном.
             </p>
-            <button type="button" class="photo__like">
+            <a class="photo__like" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
                     <path fill="currentColor"
                           d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
                 </svg>
                 Нравится: <span class="photo__like-count">215</span>
-            </button>
+            </a>
         </div>
     </div>
     <div class="photos__item photo">
@@ -198,32 +197,30 @@
         <picture>
             <source media="(min-width: 1200px)"
                     srcset="img/photo-4-desktop@1x.jpg 1x,
-                        img/photo-4-desktop@2x.jpg 2x"
-                    sizes="25vw">
+                        img/photo-4-desktop@2x.jpg 2x">
             <source media="(min-width: 700px)"
                     srcset="img/photo-4-tablet@1x.jpg 1x,
-                        img/photo-4-tablet@2x.jpg 2x"
-                    sizes="40vw">
-            <img src="img/photo-4-mobile@1x.jpg"
+                        img/photo-4-tablet@2x.jpg 2x">
+            <img src="img/photo-4-mobile@1x.jpg" alt=""
                  srcset="img/photo-4-mobile@2x.jpg 2x"
-                 sizes="100vw" class="photo__image">
+                 class="photo__image">
         </picture>
         </a>
         <div class="photo__description">
             <div class="photo__name">
                 Сергей
-                <time class="photo__time">(25&nbsp;часов назад)</time>
+                <time  class="photo__time" datetime="2016-07-15T10:00">(25&nbsp;часов назад)</time>
             </div>
             <p class="photo__comment">
                 Самая кубанская в&nbsp;мире!
             </p>
-            <button type="button" class="photo__like">
+            <a class="photo__like" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
                     <path fill="currentColor"
                           d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
                 </svg>
                 Нравится: <span class="photo__like-count">4</span>
-            </button>
+            </a>
         </div>
     </div>
     <div class="photos__item photo">
@@ -231,32 +228,30 @@
         <picture>
             <source media="(min-width: 1200px)"
                     srcset="img/photo-5-desktop@1x.jpg 1x,
-                        img/photo-5-desktop@2x.jpg 2x"
-                    sizes="25vw">
+                        img/photo-5-desktop@2x.jpg 2x">
             <source media="(min-width: 700px)"
                     srcset="img/photo-5-tablet@1x.jpg 1x,
-                        img/photo-5-tablet@2x.jpg 2x"
-                    sizes="40vw">
-            <img src="img/photo-5-mobile@1x.jpg"
+                        img/photo-5-tablet@2x.jpg 2x">
+            <img src="img/photo-5-mobile@1x.jpg" alt=""
                  srcset="img/photo-5-mobile@2x.jpg 2x"
-                 sizes="100vw" class="photo__image">
+                 class="photo__image">
         </picture>
         </a>
         <div class="photo__description">
             <div class="photo__name">
                 Максим
-                <time class="photo__time">(40&nbsp;часов назад)</time>
+                <time  class="photo__time" datetime="2016-07-15T10:00">(40&nbsp;часов назад)</time>
             </div>
             <p class="photo__comment">
                 Где снег-то?
             </p>
-            <button type="button" class="photo__like">
+            <a class="photo__like" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
                     <path fill="currentColor"
                           d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
                 </svg>
                 Нравится: <span class="photo__like-count">150</span>
-            </button>
+            </a>
         </div>
     </div>
     <div class="photos__item photo">
@@ -264,32 +259,30 @@
         <picture>
             <source media="(min-width: 1200px)"
                     srcset="img/photo-6-desktop@1x.jpg 1x,
-                        img/photo-6-desktop@2x.jpg 2x"
-                    sizes="25vw">
+                        img/photo-6-desktop@2x.jpg 2x">
             <source media="(min-width: 700px)"
                     srcset="img/photo-6-tablet@1x.jpg 1x,
-                        img/photo-6-tablet@2x.jpg 2x"
-                    sizes="40vw">
-            <img src="img/photo-6-mobile@1x.jpg"
+                        img/photo-6-tablet@2x.jpg 2x">
+            <img src="img/photo-6-mobile@1x.jpg" alt=""
                  srcset="img/photo-6-mobile@2x.jpg 2x"
-                 sizes="100vw" class="photo__image">
+                 class="photo__image">
         </picture>
         </a>
         <div class="photo__description">
             <div class="photo__name">
                 Надежда
-                <time class="photo__time">(45&nbsp;часов назад)</time>
+                <time  class="photo__time" datetime="2016-07-15T10:00">(45&nbsp;часов назад)</time>
             </div>
             <p class="photo__comment">
                 Всем GM&nbsp;и&nbsp;взаимные лайки!
             </p>
-            <button type="button" class="photo__like">
+            <a class="photo__like" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="521.939 473.064 13 12">
                     <path fill="currentColor"
                           d="M528.177 485.063c-.212 0-.412-.09-.552-.25-3.8-4.326-4.647-5.3-4.86-5.574h-.005c-.53-.674-.82-1.518-.82-2.373 0-2.097 1.703-3.803 3.8-3.803.934 0 1.805.32 2.485.9.697-.58 1.56-.9 2.465-.9 2.096 0 3.802 1.706 3.802 3.803 0 .91-.32 1.755-.897 2.38l-4.863 5.567c-.14.158-.343.25-.555.25zm-4.248-6.71c.206.254 2.47 2.84 4.244 4.86l4.326-4.948c.34-.37.52-.86.52-1.4 0-1.285-1.045-2.332-2.33-2.332-.732 0-1.422.344-1.902.944-.142.178-.354.267-.586.275-.227-.002-.44-.11-.575-.293-.44-.59-1.13-.927-1.888-.927-1.287 0-2.333 1.047-2.333 2.332 0 .68.275 1.172.507 1.47.004.005.01.01.014.02z"/>
                 </svg>
                 Нравится: <span class="photo__like-count">2560</span>
-            </button>
+            </a>
         </div>
     </div>
 </div>
@@ -299,7 +292,7 @@
     Выкладывайте все, что накопилось в&nbsp;телефоне!
 </div>
 
-<div class="photo-editor">
+<div class="photo-editor js-only">
     <div class="photo-editor__container">
         <div class="photo-editor__content">
             <img src="img/photo-7-mobile@1x.jpg" alt="" class="">
@@ -413,11 +406,7 @@
     </div>
 </footer>
 
-<script src="js/plugins/picturefill.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/minislider.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/app.js"></script>
+<script src="js/script.min.js"></script>
 
 </body>
 </html>

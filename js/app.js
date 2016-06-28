@@ -8,3 +8,10 @@ document.ready(function () {
         new MiniSlider(slider);
     });
 });
+
+document.ready(function(){
+    var jsBlocks = document.querySelectorAll('.js-only');
+    Array.prototype.forEach.call(jsBlocks, function (jsBlock) {
+        jsBlock.classList.remove('js-only');
+    });
+});

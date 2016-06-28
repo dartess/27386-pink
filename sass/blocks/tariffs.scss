@@ -112,11 +112,11 @@
     align-items: center;
 
     &--support_yes {
-      background-image: url(../../img/icon-yes.svg);
+      background-image: url(../img/icon-yes.svg);
     }
 
     &--support_no {
-      background-image: url(../../img/icon-no.svg);
+      background-image: url(../img/icon-no.svg);
     }
 
     @media ($sm) {
