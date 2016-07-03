@@ -5,6 +5,7 @@
   @include container();
   text-align: center;
   padding-top: 37px;
+  padding-bottom: 30px;
 
   @media ($sm) {
     display: flex;

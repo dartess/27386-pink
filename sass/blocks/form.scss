@@ -127,6 +127,10 @@
     }
   }
 
+  &__block-col {
+    max-width: 40%;
+  }
+
   input[type=checkbox] {
     position: absolute;
     z-index: -1;
