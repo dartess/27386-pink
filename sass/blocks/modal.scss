@@ -1,0 +1,86 @@
+@import "../variables";
+@import "../mixins";
+
+.modal {
+  z-index: 99999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #fff;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  transform: translateY(calc(20px - 50%));
+  transition: opacity .3s $transition, transform .3s $transition;
+  text-align: center;
+
+  @media ($sm) {
+    border-radius: 5px 4px 4px 5px;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+    width: 460px;
+    margin: 0 auto;
+  }
+
+  &--show {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+
+  &--big {
+
+    @media ($md) {
+      width: 780px;
+
+      .modal__content {
+        padding: 30px 160px 50px;
+      }
+
+      .modal__footer {
+        padding: 50px 160px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 30px 20px 50px;
+
+    @media ($sm) {
+      padding: 40px 80px 55px;
+    }
+  }
+
+  &__footer {
+    margin-top: -25px;
+    padding: 50px 20px;
+    background: #F2F2F2;
+
+    @media ($sm) {
+      margin-top: -45px;
+      padding: 55px 80px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 30px;
+
+    @media ($sm) {
+      font-size: 30px;
+      line-height: 1.33;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    margin-bottom: 30px;
+
+    @media ($sm) {
+      font-size: 18px;
+      line-height: 1.33;
+    }
+  }
+}

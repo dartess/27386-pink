@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 .btn {
   @include reset-button();
@@ -38,10 +39,6 @@
     }
   }
 
-  &--bold {
-
-  }
-
   &--color_white {
     border-color: $white;
     color: $white;
@@ -70,6 +67,39 @@
       background-color: rgba($blue, .3);
       border-color: rgba($blue, 0);
       color: rgba($blue, .3);
+    }
+  }
+
+  &--color_green {
+    border: none;
+    padding: 12px 17px;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    background-color: #2aab6d;
+    border-radius: 3px;
+    transition: background-color .2s $transition, color .2s $transition;
+
+    @media ($md) {
+      font-size: 18px;
+      padding: 12px 17px;
+    }
+
+    &:hover, &:focus {
+      background-color: #1c9b5e;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba($white, .3);
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: #e5e5e5;
     }
   }
 }
