@@ -35,7 +35,7 @@ gulp.task("style", function () {
                 ]
             }),
             mqpacker({
-                sort: true
+                sort: false
             })
         ]))
         .pipe(gulp.dest("build/css"))
