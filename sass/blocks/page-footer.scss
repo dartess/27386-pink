@@ -40,8 +40,15 @@
 
   &__copyright {
 
+    @media ($sm) {
+      position: relative;
+      top: 12px;
+      margin-left: 15px;
+    }
+
     @media ($md) {
       font-size: 18px;
+      margin-left: 0;
     }
 
     a {
@@ -49,6 +56,7 @@
       margin-left: 5px;
       color: $pink;
       border-bottom: none;
+      vertical-align: middle;
       &:hover, &:focus {
         outline: none;
 
@@ -79,6 +87,8 @@
 
     @media ($sm) {
       margin-bottom: 0;
+      position: relative;
+      top: 9px;
     }
   }
 }

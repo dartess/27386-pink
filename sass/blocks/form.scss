@@ -33,46 +33,21 @@
     position: relative;
     padding: 30px 20px 35px;
 
-    &:nth-of-type(2n) {
-      background-color: #F2F2F2;
-
-      @media ($sm) {
-        background-color: #fff;
-      }
-    }
-
     @media ($sm) {
       padding-bottom: 0;
       margin-bottom: 10px;
-
-      &--name {
-        order: 1;
-      }
-
-      &--achievements {
-        order: 4;
-      }
-
-      &--contacts {
-        order: 3;
-      }
-
-      &--apps {
-        order: 2;
-      }
-
-      &--emotions {
-        order: 5;
-      }
     }
 
     @media ($md) {
       padding-top: 7px;
       flex-basis: 100%;
+    }
 
-      &--name {
-        flex-basis: auto;
-        width: 46.3%;
+    &:nth-of-type(2n) {
+      background-color: #F2F2F2;
+
+      @media ($sm) {
+        background-color: #fff;
       }
     }
 
@@ -94,6 +69,10 @@
 
     &--apps {
 
+      @media ($sm) {
+        order: 2;
+      }
+
       @media ($md) {
         flex-basis: auto;
         width: 46.3%;
@@ -104,17 +83,37 @@
 
     &--emotions {
 
+      @media ($sm) {
+        order: 5;
+      }
     }
 
     &--name {
 
       @media ($sm) {
+        order: 1;
         padding-left: 0;
         padding-right: 0;
+      }
+
+      @media ($md) {
+        flex-basis: auto;
+        width: 46.3%;
+      }
+    }
+
+    &--contacts {
+
+      @media ($sm) {
+        order: 3;
       }
     }
 
     &--achievements {
+
+      @media ($sm) {
+        order: 4;
+      }
 
       @media ($md) {
         display: flex;
@@ -128,7 +127,24 @@
   }
 
   &__block-col {
-    max-width: 40%;
+
+    &:last-child {
+
+      .form__checkbox {
+
+        &:last-child {
+          margin-bottom: 15px;
+
+          @media ($sm) {
+            margin-bottom: 48px;
+          }
+        }
+      }
+    }
+
+    @media ($md) {
+      max-width: 40%;
+    }
   }
 
   input[type=checkbox] {
@@ -168,10 +184,6 @@
       }
     }
 
-    &:last-child {
-      margin-bottom: 15px;
-    }
-
     &::before {
       content: '';
       position: absolute;
@@ -194,20 +206,12 @@
       &:first-of-type {
         margin-top: 46px;
       }
-
-      &:last-of-type {
-        margin-bottom: 48px;
-      }
     }
 
     @media ($md) {
 
       &:first-of-type {
         margin-top: 0;
-      }
-
-      &:last-of-type {
-        margin-bottom: 48px;
       }
     }
   }
